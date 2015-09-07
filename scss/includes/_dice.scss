@@ -1,0 +1,119 @@
+.dice {
+	@include transform-style(preserve-3d);
+	height: 200px;
+	position: relative;
+	margin: auto;
+	width: 200px;
+
+	div {
+		background: rgba(#d00, .4);
+		border: 1px solid #ccc;
+		border-radius:4px;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		&:first-child {
+			@include transform(rotate(0deg) translateZ(-100px));
+		}
+
+		&:nth-child(2) {
+			@include transform(rotateX(-90deg) translateZ(100px));
+		}
+
+		&:nth-child(3) {
+			@include transform(rotateY(-90deg) translateZ(100px));
+		}
+		&:nth-child(4) {
+			@include transform(rotateY(90deg) translateZ(100px));
+		}
+		&:nth-child(5) {
+			@include transform(rotateX(90deg) translateZ(100px));
+		}
+		&:last-child {
+			@include transform(rotate(180deg) translateZ(100px));
+		}
+	}
+
+	circle {
+		fill: rgba(#fff, .8);
+	}
+}
+
+.multi {
+	div {
+		&:first-child {
+			background: rgba(#673ab7, .8);
+		}
+
+		&:nth-child(2) {
+			background: rgba(#009688, .8);
+		}
+
+		&:nth-child(3) {
+			background: rgba(#ffc107, .8);
+		}
+		&:nth-child(4) {
+			background: rgba(#e91e63, .8);
+		}
+		&:nth-child(5) {
+			background: rgba(#009688, .8);
+		}
+		&:last-child {
+			background: rgba(#8bc34a, .8);
+		}
+	}
+}
+
+.backface .side,
+.bvh {
+	@include backface-visibility(hidden);
+}
+
+.card {
+	transition: -webkit-transform 1s linear;
+	@include transition(transform 1s linear);
+	@include transform-style(preserve-3d);
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	box-sizing: content-box;
+	height: 300px;
+	position: relative;
+	width: 240px;
+}
+
+.side {
+	height: inherit;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: inherit;
+}
+
+.front {
+	@include transform(rotateY(180deg));
+}
+
+.back {
+	background: rgba(#ccc, .8) url(../../images/dicediamond.svg) center;
+	background-size: 7px auto;
+	border: 10px solid #fff;
+	border-radius: 8px;
+}
+
+.flipped {
+	@include transform(rotateY(180deg));
+}
+
+.suit {
+	position: absolute;
+	top: auto;
+	bottom: auto;
+	width: 100%;
+	padding: 0;
+	margin: auto;
+	height: 300px;
+	line-height: 1;
+	text-align: center;
+	font-size: 300px;
+}

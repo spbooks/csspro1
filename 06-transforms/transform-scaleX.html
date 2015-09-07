@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 6 - scaleX</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter6/scale.css">
+   </head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 6</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2><code id="output">transform: scaleX(<span>1</span>)</code></h2>
+            
+            <p>Adjust the slider to scale the object below.</p> 
+            
+            <div class="flex">
+                <b>0</b>
+                <input type="range" id="factor" name="factor" min="-2" max="2" value="1" step=".1">
+                <b>2</b>  
+            </div>
+           
+            <object id="scale" data="../../images/csscircle.svg" type="image/svg+xml"></object>
+         
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+
+        <script type="text/javascript">    
+            var rulestr = '#scale{transform: scaleX(%s)';         
+        </script>
+		<script type="text/javascript" src="../../js/escapereset.js"></script>
+        <script type="text/javascript" src="../../js/chapter6/scale.js"></script>
+    </body>
+</html>

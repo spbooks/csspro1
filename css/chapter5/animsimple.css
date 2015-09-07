@@ -1,0 +1,64 @@
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: .8;
+  }
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  from {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: .8;
+  }
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.svgwrap {
+  padding: 1em;
+}
+
+.pulse svg {
+  -webkit-animation: pulse 500ms infinite;
+  animation: pulse 500ms infinite;
+}
+
+.rev svg {
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.alt svg {
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.alt-rev svg {
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+}
+
+.flex section {
+  width: 25%;
+  text-align: center;
+}
+.flex svg {
+  display: block;
+  margin: auto;
+}
+
+button > * {
+  pointer-events: none;
+}

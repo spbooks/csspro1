@@ -1,0 +1,305 @@
+.dice {
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 200px;
+  position: relative;
+  margin: auto;
+  width: 200px;
+  pointer-events: none;
+}
+.dice div {
+  background: rgba(221, 0, 0, 0.4);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.dice div:first-child {
+  -webkit-transform: rotate(0deg) translateZ(-100px);
+  -ms-transform: rotate(0deg) translateZ(-100px);
+  transform: rotate(0deg) translateZ(-100px);
+}
+.dice div:nth-child(2) {
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+  -ms-transform: rotateX(-90deg) translateZ(100px);
+  transform: rotateX(-90deg) translateZ(100px);
+}
+.dice div:nth-child(3) {
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+  -ms-transform: rotateY(-90deg) translateZ(100px);
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.dice div:nth-child(4) {
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+  -ms-transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(90deg) translateZ(100px);
+}
+.dice div:nth-child(5) {
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+  -ms-transform: rotateX(90deg) translateZ(100px);
+  transform: rotateX(90deg) translateZ(100px);
+}
+.dice div:last-child {
+  -webkit-transform: rotate(180deg) translateZ(100px);
+  -ms-transform: rotate(180deg) translateZ(100px);
+  transform: rotate(180deg) translateZ(100px);
+}
+.dice circle {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+.multi div:first-child {
+  background: rgba(103, 58, 183, 0.8);
+}
+.multi div:nth-child(2) {
+  background: rgba(0, 150, 136, 0.8);
+}
+.multi div:nth-child(3) {
+  background: rgba(255, 193, 7, 0.8);
+}
+.multi div:nth-child(4) {
+  background: rgba(233, 30, 99, 0.8);
+}
+.multi div:nth-child(5) {
+  background: rgba(0, 150, 136, 0.8);
+}
+.multi div:last-child {
+  background: rgba(139, 195, 74, 0.8);
+}
+
+.backface .side,
+.bvh {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card {
+  transition: -webkit-transform 1s linear;
+  -webkit-transition: transform 1s linear;
+  transition: transform 1s linear;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: content-box;
+  height: 300px;
+  position: relative;
+  width: 240px;
+}
+
+.side {
+  height: inherit;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: inherit;
+}
+
+.front {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.back {
+  background: rgba(204, 204, 204, 0.8) url(../../images/dicediamond.svg) center;
+  background-size: 7px auto;
+  border: 10px solid #fff;
+  border-radius: 8px;
+}
+
+.flipped {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.suit {
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  width: 100%;
+  padding: 0;
+  margin: auto;
+  height: 300px;
+  line-height: 1;
+  text-align: center;
+  font-size: 300px;
+}
+
+.dn {
+  display: none;
+}
+
+#rotate {
+  font-size: 1em;
+  font-size: 1.2vw;
+  height: 15em;
+  height: 15vw;
+  margin: 4em auto;
+  padding: 1em;
+  padding: 1vw;
+  width: 15em;
+  width: 15vw;
+  pointer-events: none;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#output {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+[type=range] {
+  display: inline-block;
+  width: 100%;
+}
+
+.dimen {
+  perspective: 200px;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+.unit {
+  font-weight: normal;
+}
+
+.animate {
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.r540 {
+  -webkit-transform: rotate(540deg);
+  -ms-transform: rotate(540deg);
+  transform: rotate(540deg);
+}
+
+/* 
+See formulas described here: 
+http://desandro.github.io/3dtransforms/docs/carousel.html
+*/
+.carousel {
+  perspective-origin: 50% -300px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.wrapper {
+  position: relative;
+  width: 500px;
+  margin: auto;
+}
+
+.p3d {
+  transform-style: preserve-3d;
+}
+
+.bvv {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+.p500 {
+  perspective: 500px;
+}
+
+.p2000 {
+  perspective: 2000px;
+}
+
+.dn {
+  display: none;
+}
+
+.flat {
+  transform-style: flat !important;
+}
+
+.paused {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+}
+
+.perp {
+  color: #212121;
+  font: 200 15vw / 1.2 sans-serif;
+  position: absolute;
+  pointer-events: none;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  top: -50px;
+  left: 0;
+}
+.perp:first-child {
+  -webkit-transform: rotateY(60deg) translateZ(191px);
+  -ms-transform: rotateY(60deg) translateZ(191px);
+  transform: rotateY(60deg) translateZ(191px);
+  background: #3f51b5;
+}
+.perp:nth-child(2) {
+  -webkit-transform: rotateY(360deg) translateZ(191px);
+  -ms-transform: rotateY(360deg) translateZ(191px);
+  transform: rotateY(360deg) translateZ(191px);
+  background: #00bcd4;
+}
+.perp:nth-child(3) {
+  -webkit-transform: rotateY(300deg) translateZ(191px);
+  -ms-transform: rotateY(300deg) translateZ(191px);
+  transform: rotateY(300deg) translateZ(191px);
+  background: #ffeb3b;
+}
+.perp:nth-child(4) {
+  -webkit-transform: rotateY(240deg) translateZ(191px);
+  -ms-transform: rotateY(240deg) translateZ(191px);
+  transform: rotateY(240deg) translateZ(191px);
+  background: #f44336;
+}
+.perp:nth-child(5) {
+  -webkit-transform: rotateY(180deg) translateZ(191px);
+  -ms-transform: rotateY(180deg) translateZ(191px);
+  transform: rotateY(180deg) translateZ(191px);
+  background: #e91e63;
+}
+.perp:nth-child(6) {
+  -webkit-transform: rotateY(120deg) translateZ(191px);
+  -ms-transform: rotateY(120deg) translateZ(191px);
+  transform: rotateY(120deg) translateZ(191px);
+  background: #8bc34a;
+}
+
+[type=reset] {
+  margin: 0 2em;
+}
+
+.flex p {
+  width: 20%;
+}
+
+@keyframes rotatey {
+  from {
+    -webkit-transform: rotate3d(1, 1, 0, 0.01deg);
+    -ms-transform: rotate3d(1, 1, 0, 0.01deg);
+    transform: rotate3d(1, 1, 0, 0.01deg);
+  }
+  to {
+    -webkit-transform: rotate3d(1, 1, 0, 360deg);
+    -ms-transform: rotate3d(1, 1, 0, 360deg);
+    transform: rotate3d(1, 1, 0, 360deg);
+  }
+}
+.rotatey {
+  -webkit-animation: rotatey 3s infinite;
+  animation: rotatey 3s infinite;
+  transform-origin: 50% 50%;
+  padding-top: 5em;
+}

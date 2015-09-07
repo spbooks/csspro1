@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 6 - transform-origin</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter6/transform-origin.css">
+    </head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 6</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2><code>transform-origin</code> examples</h2>
+
+            <form id="form" class="flex">
+                <fieldset class="flex">
+                <div class="flex"><legend>Pick a transform</legend>
+                
+                
+                    <p>
+                        <input type="radio" name="transformation" id="rotate" value="rotate">
+                        <label for="rotate">rotate(45deg)</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="transformation" id="scale" value="scale">
+                        <label for="scale">scale(1.5)</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="transformation" id="skewX" value="skewX">
+                        <label for="skewX">skewX(45deg)</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" name="animate" id="animate" checked>
+                        <label for="animate">transition</label>
+                    </p>
+                    <p><button type="reset">Reset</button></p>
+                </div>
+
+                </fieldset>
+            </form>
+            
+            <div class="flex wrap">
+                <div class="to">
+                    <div><b>50% 50% 0</b></div>
+                </div>
+
+                <div class="to to000">
+                    <div><b>0 0 0</b></div>
+                </div>
+
+                <div class="to to100100">
+                    <div><b>100% 100% 0</b></div>
+                </div>
+
+                <div class="to to150150">
+                    <div><b>150% 150% 0</b></div>
+                </div>  
+            </div>
+
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+
+        <script type="text/javascript">
+            var changeHandler, resetHandler, form = document.getElementById('form');
+
+            changeHandler = function(e){
+                var obj = document.querySelectorAll('.to div');
+
+                if(e.target.name !== 'animate') {
+                    Array.prototype.map.call(obj, function(o){
+                        o.removeAttribute('class');
+                        o.classList.toggle(e.target.value);
+                    });
+                }
+
+                if(!!document.querySelector('#animate').checked){
+                     Array.prototype.map.call(obj, function(o){
+                        o.classList.add('animate');
+                    });
+                }
+            }
+
+            resetHandler = function(e){
+                var obj = document.querySelectorAll('.to div');
+
+                Array.prototype.map.call(obj, function(o){
+                    o.removeAttribute('class');
+                });
+
+                if(!!document.querySelector('#animate').checked){
+                     Array.prototype.map.call(obj, function(o){
+                        o.classList.add('animate');
+                    });
+                }
+            }
+
+            form.addEventListener('change', changeHandler);
+            form.addEventListener('reset', resetHandler);
+        </script>
+    </body>
+</html>

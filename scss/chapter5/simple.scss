@@ -1,0 +1,17 @@
+@import "../includes/config";
+@import "../includes/mixins";
+
+
+.larger {
+	font-size: $basefont * 2;
+
+	a {
+		transition: 500ms;
+
+		&:hover {
+			color: #f0c;
+		}	
+	}
+
+}
+

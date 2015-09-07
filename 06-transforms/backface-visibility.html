@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 6 - perspective property</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter6/backface-vis.css">
+   </head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 6</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2>Showing or the <code>backface-visibility</code> property</h2>
+            
+            <p>Click the button below to toggle between <code>backface-visibility</code> states.</p>
+
+            <p><code>backface-visibility:</code> <code id="value">hidden</code></p>
+
+            <p class="flexl">
+                <button type="button" data-classname="bvh">Toggle backface visibility</button>
+                <span>
+                    <input type="checkbox" id="multi" name="multi" data-classname="multi">
+                    <label for="multi">use multiple colors</label>
+                </span>
+            </p>
+
+             <div class="flex">
+                <p>
+                    <label for="angle">rotateX</label>
+                    <input type="range" id="angleX" name="angleX" min="-360" max="360" value="0" step="5" class="angle">
+                </p>
+                <p>
+                    <label for="angle">rotateY</label>
+                    <input type="range" id="angleY" name="angleY" min="-360" max="360" value="0" step="5" class="angle">
+                </p>
+            </div>
+
+
+            <div id="perspective">
+                 
+             <div class="dice">
+                    <div class="d1 bvh">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                        <circle cx="100" cy="100" r="25"/>
+                        </svg>
+                     </div> 
+
+                     <div class="d2 bvh">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                        <circle cx="50" cy="50" r="25"/>
+                        <circle cx="149.9" cy="149.9" r="25"/>
+                        </svg>
+                     </div>  
+
+
+                     <div class="d3 bvh">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                        <circle cx="50" cy="50" r="25"/>
+                        <circle cx="149.9" cy="149.9" r="25"/>
+                        <circle cx="100" cy="100" r="25"/>
+                        </svg>
+                     </div>  
+
+                     <div class="d4 bvh">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                        <circle cx="50" cy="50" r="25"/>
+                        <circle cx="149.9" cy="149.9" r="25"/>
+                        <circle cx="149.9" cy="50" r="25"/>
+                        <circle cx="50" cy="149.9" r="25"/>
+                        </svg>  
+                    </div>
+
+
+                    <div class="d5 bvh">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                        <circle cx="50" cy="50" r="25"/>
+                        <circle cx="149.9" cy="149.9" r="25"/>
+                        <circle cx="149.9" cy="50" r="25"/>
+                        <circle cx="50" cy="149.9" r="25"/>
+                        <circle cx="100" cy="100" r="25"/>
+                        </svg> 
+                    </div>
+
+                    <div class="d6 bvh">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                            <circle cx="50" cy="40" r="25"/>
+                            <circle cx="149.9" cy="159.9" r="25"/>
+                            <circle cx="149.9" cy="40" r="25"/>
+                            <circle cx="50" cy="159.9" r="25"/>
+                            <circle cx="149.9" cy="100" r="25"/>
+                            <circle cx="50" cy="100" r="25"/>
+                        </svg>
+                    </div>  
+                </div>
+            </div>
+
+           
+        </main>
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+        <script type="text/javascript">    
+            var rulestr = '.dice{ -webkit-transform: rotateX(%xdeg) rotateY(%ydeg); transform: rotateX(%xdeg) rotateY(%ydeg); }';         
+        </script>
+		<script type="text/javascript" src="../../js/escapereset.js"></script>
+        <script type="text/javascript" src="../../js/chapter6/backface-vis.js"></script>
+    </body>
+</html>

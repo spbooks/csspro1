@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 6 - skewX</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter6/skew.css">
+   </head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 6</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2><code id="output">transform: skewY(<span>0</span>deg)</code></h2>
+            
+            <p>Adjust the slider to skew the object below.</p> 
+            
+            <div class="flex">
+                <b>-360</b>
+                <input type="range" id="angle" name="angle" min="-360" max="360" value="0" step="5">
+                <b>360</b>
+            </div>
+           
+            <object id="skew" data="../../images/csscircle.svg" type="image/svg+xml"></object>
+           
+            <div class="flexl mono">
+                <p><b class="unit">0</b>rad</p>
+                <p><b class="unit">0</b>grad</p>
+            </div>
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+
+        <script type="text/javascript">    
+            var rulestr = '#skew{transform: skewY(%s)';         
+        </script>
+		<script type="text/javascript" src="../../js/escapereset.js"></script>
+        <script type="text/javascript" src="../../js/convertangles.min.js"></script>
+		<script type="text/javascript" src="../../js/chapter6/rotations.js"></script>
+    </body>
+</html>

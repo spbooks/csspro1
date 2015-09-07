@@ -1,0 +1,16 @@
+form {
+  position: relative;
+  z-index: 3;
+}
+
+[type=range] {
+  margin-right: 1em;
+  width: 90%;
+}
+
+.perpfunc {
+  background: #673ab7;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}

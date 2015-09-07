@@ -1,0 +1,31 @@
+@import "includes/mixins";
+@import "rotate.scss";
+
+
+#scale {
+	@extend #rotate;
+}
+
+.flex{
+	[type=range] {
+		margin: 1em;
+		width: 80%;
+	}
+}
+
+[type=range] {
+	position:relative;
+	z-index: 2;
+}
+
+#scale3d b {
+	padding:0 1em;
+}
+
+#scalez {
+	pointer-events: none;
+}
+#scalez .dice{
+	@include transform-style(preserve-3d);
+	@include backface-visibility(visible);
+}

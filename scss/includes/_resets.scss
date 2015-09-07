@@ -1,0 +1,69 @@
+@import "includes/mixins";
+
+/* Used for [type=range] inputs */
+.toggle {
+    @include appearance(none);
+    background: #eee;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px #333;
+    padding: 2px;
+    vertical-align: bottom;
+    width: 50px;
+
+    &:focus {
+        outline: none;
+        border-color: #f50;
+    }
+
+    &::-moz-range-thumb {
+        height: 99%;
+    }
+
+    &::-moz-range-track {
+        background: transparent;
+    }
+
+    &::-ms-track {
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+    }
+    &::-ms-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+    }
+    
+    &::-ms-track {
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+
+    &::-ms-thumb {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      background: #ccc;
+      border: 1px solid #666;
+    }
+
+    .toggle.active {
+      background: #4caf50;
+    }
+
+    &::-ms-track,
+    &::-ms-fill-lower,
+    &::-ms-fill-upper {
+      background: transparent;
+    }
+
+    &::-ms-tooltip {
+      display: none;
+    }
+}
+
+
+

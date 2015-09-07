@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 6 - perspective property</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter6/backface-vis.css">
+   </head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 6</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2>How the <code>backface-visibility</code> property works</h2>
+            
+            <p>Click the button below flip the cards. The card on the left has <code>backface-visibility: none</code> applied.</p>
+
+            <p>
+                <button type="button" data-classname="flipped">Flip</button>
+            </p>
+
+
+            <div id="perspective" class="flex">
+            
+            <section class="demo backface"> 
+            
+                <div class="card">
+                    <div class="side front">
+                        <p class="suit">&clubs;</p>
+                    </div> 
+                    <div class="side back"></div>  
+                </div>
+            </section>
+
+            <section>
+            <div class="card">
+                <div class="side front">
+                   <p class="suit">&clubs;</p>
+                 </div> 
+
+                 <div class="side back"></div>  
+            </div>
+            </section>
+
+           
+        </main>
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+        <script type="text/javascript">    
+            var rulestr = '#perspective{perspective: %s}';         
+        </script>
+		<script type="text/javascript" src="../../js/escapereset.js"></script>
+        <script type="text/javascript" src="../../js/chapter6/backface-vis-card.js"></script>
+    </body>
+</html>

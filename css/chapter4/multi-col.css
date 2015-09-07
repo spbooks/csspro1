@@ -1,0 +1,74 @@
+img {
+  display: block;
+  width: 100%;
+}
+
+.content {
+  margin: 2em 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+form {
+  border: 1px solid #607d8b;
+  background: rgba(96, 125, 139, 0.25);
+  padding: 1rem;
+  margin: 0 0 1rem;
+}
+form label {
+  display: block;
+}
+form input, form select {
+  display: block;
+}
+
+form > div {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+form > div > p {
+  -webkit-flex: 1 1 33.3%;
+  -ms-flex: 1 1 33.3%;
+  flex: 1 1 33.3%;
+  padding: 0 1em;
+  text-align: center;
+}
+
+input:not([type=checkbox]), select {
+  border: 1px solid #ccc;
+  padding: .5rem;
+  margin: auto;
+}
+
+[type=number] {
+  width: 5rem;
+}
+
+.serif {
+  font: normal 18px / 1.2 'Palatino','Cambria','Georgia',serif;
+}
+
+.multi-col-span {
+  -webkit-columns: 2 10em;
+  -moz-columns: 2 10em;
+  columns: 2 10em;
+  margin: 3em 0;
+  padding: 0;
+  clear: both;
+}
+.multi-col-span p {
+  margin-top: 0;
+}
+.multi-col-span h1 {
+  -webkit-column-span: all;
+  -moz-column-span: all;
+  column-span: all;
+  padding-bottom: .5em;
+}

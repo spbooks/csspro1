@@ -1,0 +1,173 @@
+@import "includes/mixins";
+html, body{height: 100%}
+
+.warning {
+    padding: .5em;
+    
+    p {
+        margin: 0;   
+    }
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img{
+    display: block;
+}
+form {
+    background: #cecece;
+    display: block;
+    padding: 1rem;
+}
+input:not([type=checkbox]),
+select {
+    border: 1px solid #ccc;
+    padding: .5rem;
+}
+
+[type=number] {
+   width: 5rem;
+}
+
+[type=text]{
+    @include transition(all 100ms);
+    &[disabled], &:disabled {
+        background: rgba(#ccc,.6);
+        border-color: rgba(#ccc,.4);
+        color: #ccc;
+    }
+}
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    &[data-affect] {
+        background: #eee;
+        padding: 1rem;
+
+        legend {
+            display: block;
+            position: relative;
+            top: 1.2rem;
+
+        }
+    }
+    &.closed > div {
+        max-height: 0;
+    }
+    > div{
+        @include transition(max-height 250ms);
+        height: auto;
+        max-height: 1000px;
+        overflow: hidden;
+    }
+}
+
+.flex-items > div{max-height: 3000px;}
+
+legend {
+    font-weight: 900;
+}
+
+.trigger {
+    cursor: pointer;
+
+    &::after {
+        content: '\2193';
+        padding: 0 1rem;
+        display: inline-table;
+        vertical-align: top;
+    }
+
+    .closed &::after{
+        content: '\2191';
+    }
+}
+
+.note {
+    color: #333;
+    font-size: .8rem;
+    code {
+        font-style: normal
+    }
+}
+.demo {
+    background: #607d8b;
+    float: left;
+    width: 50%;
+    height: 600px;
+}
+form {
+    float: left;
+    width: 50%;
+}
+.demo-wrapper{
+    border-right: 1rem solid #fffffe;
+}
+.col-2 {
+    position: relative;
+    h1 {
+        text-align: center;
+    }
+}
+
+.demo-flex {
+    @include display-flex;
+
+    li {
+        font-size: .8rem;
+        min-height: 6rem;
+        padding: 1%;
+    }
+
+    .quarter {
+       height: 50%;
+    }
+
+
+    li > p {
+       speak: none;
+    }
+}
+.flex-item-id {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center
+}
+.alpha {
+    background: #ffeb3b;
+}
+.beta {
+    background: #03a9f4;
+}
+.gamma {
+    background: #8bc34a;
+}
+.delta {
+    background: lighten(#9c27b0,17%);
+}
+.epsilon {
+    background: lighten(#e91e63,5%);
+}
+.flex-shorthand {
+    font-size: 1.1rem;
+    font-weight: bold
+}
+.flex-basis-auto-wrap {
+     white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+    .demo {
+        height: 400px;
+        width:400px;
+    }
+    select {
+        display: block;
+        width: 100%;
+    }
+}

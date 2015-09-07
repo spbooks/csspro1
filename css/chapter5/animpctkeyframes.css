@@ -1,0 +1,80 @@
+html, body {
+  height: 100%;
+}
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: skewY(5deg) rotate(5deg) scale(0.25);
+  }
+  25% {
+    -webkit-transform: skewX(-5deg) rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: skewY(5deg) rotate(5deg) scale(1.5);
+  }
+  75% {
+    -webkit-transform: skewX(-5deg) rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: skewY(5deg) rotate(5deg) scale(0.25);
+  }
+  25% {
+    transform: skewX(-5deg) rotate(-5deg);
+  }
+  50% {
+    transform: skewY(5deg) rotate(5deg) scale(1.5);
+  }
+  75% {
+    transform: skewX(-5deg) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+.content {
+  position: relative;
+}
+
+.svgwrap {
+  height: 200px;
+  margin: 100px;
+  width: 200px;
+  transform: scale(0.25);
+}
+
+.wiggle {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-name: wiggle;
+  animation-name: wiggle;
+}
+
+.delay1s {
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
+}
+
+.none {
+  -webkit-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+
+.backwards {
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+
+.forwards {
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.both {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}

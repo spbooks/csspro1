@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Media Query Events | Advanced CSS: Chapter 7</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter7/mq.css">
+    </head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 7</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2>Media query events</h2>
+            <p><b>Resize</b> the browser window or <b>change its orientation</b>. This will toggle a class name for the <code>body</code> element, and cause the background color to change.</p>
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+   
+
+        <script type="text/javascript">
+            var mq25em = matchMedia('(orientation: landscape)');
+
+            mq25em.addListener(function(mq){
+                if (mq.matches) {
+                    document.body.classList.add('mqmatches');
+                } else {
+                    document.body.classList.remove('mqmatches');
+                }
+
+                if (console) {
+                    console.log(mq.media + ': '+mq.matches);
+                }
+            });
+        </script>
+        
+    </body>
+</html>

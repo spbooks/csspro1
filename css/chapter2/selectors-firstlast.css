@@ -1,0 +1,22 @@
+:first-child {
+  background: #ddd;
+}
+
+li:first-child {
+  color: #4caf50;
+  font-weight: bold;
+}
+li:last-child {
+  color: #e91e63;
+  font-style: italic;
+}
+
+.apple {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.strawberry {
+  color: #e91e63;
+  font-style: italic;
+}

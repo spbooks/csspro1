@@ -1,0 +1,59 @@
+@import "includes/mixins";
+
+@-webkit-keyframes pulse {
+	from {
+		@include transform(scale(.5));
+		opacity: .8;
+	}
+
+	to {
+		@include transform(scale(1));
+		opacity: 1;
+	}
+} 
+
+@keyframes pulse {
+	from {
+		@include transform(scale(.5));
+		opacity: .8;
+	}
+
+	to {
+		@include transform(scale(1));
+		opacity: 1;
+	}
+} 
+
+.svgwrap {
+	padding: 1em;
+}
+
+.pulse svg {
+	@include animation(pulse 500ms infinite);
+}
+
+.rev svg {
+	@include animation-direction(reverse);
+}
+
+.alt svg {
+	@include animation-direction(alternate);
+}
+
+.alt-rev svg {
+	@include animation-direction(alternate-reverse);
+}
+
+.flex {
+	section {
+		width: 25%; 
+		text-align:center;
+	}
+
+	svg {
+		display:block;
+		margin: auto;
+	}
+}
+
+button > * {pointer-events:none;}

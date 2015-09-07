@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Creating layouts with Flexbox (Advanced CSS)</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter4/flex.css">
+        <style type="text/css" title="FlexDemo">
+        .demo{-webkit-flex-direction: row; flex-direction: row}
+        .alpha{-webkit--webkit-order: 0; order: 0; -webkit-order: 0; order: 0}
+        .beta{-webkit-order: 0; order: 0}
+        .gamma{-webkit-order: 0; order: 0}
+        .delta{-webkit-order: 0; order: 0}
+        .epsilon{-webkit-order: 0; order: 0}
+        .zeta{-webkit-order: 0; order: 0}
+        </style>
+        <script src="../js/chapter4/flexbox.js" defer></script>
+        <script src="../../js/escapereset.js" defer></script>
+    </head>
+
+    <body>
+       <header>
+            <h1>Advanced CSS Code Examples: Chapter 4</h1>
+            <a href="../">Back to listing</a>
+        </header>
+
+        <main class="content">
+            <div class="warning alpha">
+                <p><b>NOTE</b>: This demo only works in browsers that support the latest version of the Flexbox specification. It will not work in Internet Explorer 10, Firefox &le; 27, Safari &le; 6, or Chrome &le; 20.</p>
+            </div>
+            
+            <h1>Understanding Flexbox</h1>
+            <p>Adjust the values in the form control to see their effect. Read the <a href="http://dev.w3.org/csswg/css-flexbox-1/">spec</a> for more.</p>
+            <div class="col-2 demo-flex">
+
+                <div class="demo-wrapper">
+
+                <ul class="demo-flex demo">
+                <li class="alpha">
+                    <div class="flex-item-id">A</div>
+                </li>
+                <li class="beta quarter">
+                    <div class="flex-item-id">B</div>
+                </li>
+                <li class="gamma">
+                    <div class="flex-item-id">C</div>
+                </li>
+               <li class="delta quarter">
+                    <div class="flex-item-id">D</div>
+                </li>
+                <li class="epsilon">
+                    <div class="flex-item-id">E</div>
+                </li>
+               
+              </ul></div>
+
+                <form>
+                <p>
+                    <input type="checkbox" name="same_height" id="same_height">
+                    <label for="same_height">Make items the same height</label>
+                </p>
+
+                <fieldset id="container">
+                    <legend class="trigger">Flex container properties</legend>
+                    <div>
+                    <p>
+                        <label for="flex-direction-demo" class="mono">flex-direction:</label>
+                        <select id="flex-direction-demo" data-prop="flex-direction">
+                            <option>row</option>
+                            <option>row-reverse</option>
+                            <option>column</option>
+                            <option>column-reverse</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="flex-wrap-demo" class="mono">flex-wrap:</label>
+                        <select id="flex-wrap-demo" data-prop="flex-wrap">
+                            <option>nowrap</option>
+                            <option>wrap</option>
+                            <option>wrap-reverse</option>
+                        </select>
+                    </p>
+                    <p class="note">The properties above can also be combined using the <a href="http://dev.w3.org/csswg/css-flexbox-1/#propdef-flex-flow" target="_blank"><code>flex-flow</code></a> shorthand property.</p>
+
+                    <p>
+                        <label for="justify-content-demo" class="mono">justify-content:</label>
+                        <select id="justify-content-demo" data-prop="justify-content">
+                            <option>flex-start</option>
+                            <option>flex-end</option>
+                            <option>center</option>
+                            <option>space-between</option>
+                            <option>space-around</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="align-items-demo" class="mono">align-items:</label>
+                        <select id="align-items-demo" data-prop="align-items">
+                            <option>flex-start</option>
+                            <option>flex-end</option>
+                            <option selected>center</option>
+                            <option>baseline</option>
+                            <option>stretch</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="align-content-demo" class="mono">align-content:</label>
+                        <select id="align-content-demo" data-prop="align-content">
+                            <option>flex-start</option>
+                            <option>flex-end</option>
+                            <option>center</option>
+                            <option>space-between</option>
+                            <option>space-around</option>
+                            <option>stretch</option>
+                        </select>
+                    </p>
+
+                    </div>
+                </fieldset>
+
+                <fieldset class="flex-items">
+                    <legend class="trigger">Flex items</legend>
+
+                    <div>
+                        <fieldset data-affect="alpha">
+                        <legend class="trigger">A</legend>
+                        <div>
+                        <p>
+                            <label for="order-alpha" class="mono">order:</label>
+                            <input id="order-alpha" type="number" min="-6" max="100" value="0" data-prop="order">
+                        </p>
+                        <p>
+                            <label for="align-self-alpha" class="mono">align-self:</label>
+                            <select id="align-self-alpha" data-prop="align-self">
+                                <option>auto</option>
+                                <option>flex-start</option>
+                                <option>flex-end</option>
+                                <option>center</option>
+                                <option>baseline</option>
+                                <option>stretch</option>
+                            </select>
+                        </p>
+                        <p>Condense these properties using the <code>flex</code> shorthand.</p>
+                        <p class="flex-shorthand-alpha"><code>flex:</code><code>0</code> <code>1</code> <code>15%</code></p>
+                        <p>
+                            <label for="flex-grow-alpha" class="mono">flex-grow:</label>
+                            <input id="flex-grow-alpha" type="number" min="0" value="0" data-prop="flex-grow">
+                        </p>
+                        <p>
+                            <label for="flex-shrink-alpha" class="mono">flex-shrink:</label>
+                            <input id="flex-shrink-alpha" type="number" min="1" value="1" data-prop="flex-shrink">
+                        </p>
+                        <p>
+                            <label for="flex-basis-alpha" class="mono">flex-basis:</label>
+                            <input id="flex-basis-alpha" type="text" value="15%" pattern="[0-9]{1,}(px|em|rem|ch|ex|vw|vh|vmin|vmax|cm|mm|%|in|pt|pc)" data-prop="flex-basis">
+                            <span class="flex-basis-auto-wrap"><input type="checkbox" id="flex-basis-auto-alpha"> <label for="flex-basis-auto-alpha" class="mono">auto</label></span>
+                            <span class="note flex-basis-auto-note" hidden><br>Enter a length or percentage, e.g.: 40%, 10em, 100px, or 5rem.</span>
+                        </p>
+                        </div>
+                    </fieldset>
+                    <fieldset data-affect="beta">
+                        <legend class="trigger">B</legend>
+                        <div>
+                        <p>
+                            <label for="order-beta" class="mono">order:</label>
+                            <input id="order-beta" type="number" min="-6" max="100" value="0" data-prop="order">
+                        </p>
+                        <p>
+                            <label for="align-self-beta" class="mono">align-self:</label>
+                            <select id="align-self-beta" data-prop="align-self">
+                                <option>auto</option>
+                                <option>flex-start</option>
+                                <option>flex-end</option>
+                                <option>center</option>
+                                <option>baseline</option>
+                                <option>stretch</option>
+                            </select>
+                        </p>
+                        <p>Condense these properties using the <code>flex</code> shorthand.</p>
+                        <p class="flex-shorthand-beta"><code>flex:</code><code>0</code> <code>1</code> <code>15%</code></p>
+                        <p>
+                            <label for="flex-grow-beta" class="mono">flex-grow:</label>
+                            <input id="flex-grow-beta" type="number" min="0" max="10" value="0" data-prop="flex-grow">
+                        </p>
+                        <p>
+                            <label for="flex-shrink-beta" class="mono">flex-shrink:</label>
+                            <input id="flex-shrink-beta" type="number" min="1" max="10" value="1" data-prop="flex-shrink">
+                        </p>
+                        <p>
+                            <label for="flex-basis-beta" class="mono">flex-basis:</label>
+                            <input id="flex-basis-beta" type="text" value="15%" pattern="[0-9]{1,}(px|em|rem|ch|ex|vw|vh|vmin|vmax|cm|mm|%|in|pt|pc)" data-prop="flex-basis">
+                            <span class="flex-basis-auto-wrap"><input type="checkbox" id="flex-basis-auto-beta"> <label for="flex-basis-auto-beta" class="mono">auto</label></span>
+                            <span class="note flex-basis-auto-note" hidden><br>Enter a length or percentage, e.g.: 40%, 10em, 100px, or 5rem.</span>
+                        </p>
+                        </div>
+                    </fieldset>
+                    <fieldset data-affect="gamma">
+                        <legend class="trigger">C</legend>
+                        <div>
+                        <p>
+                            <label for="order-gamma" class="mono">order:</label>
+                            <input id="order-gamma" type="number" min="-6" max="100" value="0" data-prop="order">
+                        </p>
+                        <p>
+                            <label for="align-self-gamma" class="mono">align-self:</label>
+                            <select id="align-self-gamma" data-prop="align-self">
+                                <option>auto</option>
+                                <option>flex-start</option>
+                                <option>flex-end</option>
+                                <option>center</option>
+                                <option>baseline</option>
+                                <option>stretch</option>
+                            </select>
+                        </p>
+                        <p>Condense these properties using the <code>flex</code> shorthand.</p>
+                        <p class="flex-shorthand-gamma"><code>flex:</code><code>0</code> <code>1</code> <code>15%</code></p>
+                        <p>
+                            <label for="flex-grow-gamma" class="mono">flex-grow:</label>
+                            <input id="flex-grow-gamma" type="number" min="0" max="10" value="0" data-prop="flex-grow">
+                        </p>
+                        <p>
+                            <label for="flex-shrink-gamma" class="mono">flex-shrink:</label>
+                            <input id="flex-shrink-gamma" type="number" min="1" max="10" value="1" data-prop="flex-shrink">
+                        </p>
+                        <p>
+                            <label for="flex-basis-gamma" class="mono">flex-basis:</label>
+                            <input id="flex-basis-gamma" type="text" value="15%" pattern="[0-9]{1,}(px|em|rem|ch|ex|vw|vh|vmin|vmax|cm|mm|%|in|pt|pc)" data-prop="flex-basis">
+                            <span class="flex-basis-auto-wrap"><input type="checkbox" id="flex-basis-auto-gamma"> <label for="flex-basis-auto-gamma" class="mono">auto</label></span>
+                            <span class="note flex-basis-auto-note" hidden><br>Enter a length or percentage, e.g.: 40%, 10em, 100px, or 5rem.</span>
+                        </p>
+                        </div>
+                    </fieldset>
+                    <fieldset data-affect="delta">
+                        <legend class="trigger">D</legend>
+                        <div>
+                        <p>
+                            <label for="order-delta" class="mono">order:</label>
+                            <input id="order-delta" type="number" min="-6" max="100" value="0" data-prop="order">
+                        </p>
+                        <p>
+                            <label for="align-self-delta" class="mono">align-self:</label>
+                            <select id="align-self-delta" data-prop="align-self">
+                                <option>auto</option>
+                                <option>flex-start</option>
+                                <option>flex-end</option>
+                                <option>center</option>
+                                <option>baseline</option>
+                                <option>stretch</option>
+                            </select>
+                        </p>
+                        <p>Condense these properties using the <code>flex</code> shorthand.</p>
+                        <p class="flex-shorthand-delta"><code>flex:</code><code>0</code> <code>1</code> <code>15%</code></p>
+                        <p>
+                            <label for="flex-grow-delta" class="mono">flex-grow:</label>
+                            <input id="flex-grow-delta" type="number" min="0" max="10" value="0" data-prop="flex-grow">
+                        </p>
+                        <p>
+                            <label for="flex-shrink-delta" class="mono">flex-shrink:</label>
+                            <input id="flex-shrink-delta" type="number" min="1" max="10" value="1" data-prop="flex-shrink">
+                        </p>
+                        <p>
+                            <label for="flex-basis-delta" class="mono">flex-basis:</label>
+                            <input id="flex-basis-delta" type="text" value="15%" pattern="[0-9]{1,}(px|em|rem|ch|ex|vw|vh|vmin|vmax|cm|mm|%|in|pt|pc)" data-prop="flex-basis">
+                            <span class="flex-basis-auto-wrap"><input type="checkbox" id="flex-basis-auto-delta"> <label for="flex-basis-auto-delta" class="mono">auto</label></span>
+                            <span class="note flex-basis-auto-note" hidden><br>Enter a length or percentage, e.g.: 40%, 10em, 100px, or 5rem.</span>
+                        </p>
+                        </div>
+                    </fieldset>
+                    <fieldset data-affect="epsilon">
+                        <legend class="trigger">E</legend>
+                        <div>
+                        <p>
+                            <label for="order-epsilon" class="mono">order:</label>
+                            <input id="order-epsilon" type="number" min="-6" max="100" value="0" data-prop="order">
+                        </p>
+                        <p>
+                            <label for="align-self-epsilon" class="mono">align-self:</label>
+                            <select id="align-self-epsilon" data-prop="align-self">
+                                <option>auto</option>
+                                <option>flex-start</option>
+                                <option>flex-end</option>
+                                <option>center</option>
+                                <option>baseline</option>
+                                <option>stretch</option>
+                            </select>
+                        </p>
+                        <p>Condense these properties using the <code>flex</code> shorthand.</p>
+                        <p class="flex-shorthand-epsilon"><code>flex:</code><code>0</code> <code>1</code> <code>15%</code></p>
+                        <p>
+                            <label for="flex-grow-epsilon" class="mono">flex-grow:</label>
+                            <input id="flex-grow-epsilon" type="number" min="0" max="10" value="0" data-prop="flex-grow">
+                        </p>
+                        <p>
+                            <label for="flex-shrink-epsilon" class="mono">flex-shrink:</label>
+                            <input id="flex-shrink-epsilon" type="number" min="1" max="10" value="1" data-prop="flex-shrink">
+                        </p>
+                        <p>
+                            <label for="flex-basis-epsilon" class="mono">flex-basis:</label>
+                            <input id="flex-basis-epsilon" type="text" value="15%" pattern="[0-9]{1,}(px|em|rem|ch|ex|vw|vh|vmin|vmax|cm|mm|%|in|pt|pc)" data-prop="flex-basis">
+                            <span class="flex-basis-auto-wrap"><input type="checkbox" id="flex-basis-auto-epsilon"> <label for="flex-basis-auto-epsilon" class="mono">auto</label></span>
+                            <span class="note flex-basis-auto-note" hidden><br>Enter a length or percentage, e.g.: 40%, 10em, 100px, or 5rem.</span>
+                        </p>
+                        </div>
+                    </fieldset>
+                    </div>
+                </fieldset>
+                
+                 <p>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </p>
+                    
+            </form>
+            </div>
+          </main>
+
+
+        <footer>
+            <p>With a tip of the cap to <a href="http://demo.agektmr.com/flexbox/">CSS Flexbox Please!</a></p>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+    </body>
+</html>

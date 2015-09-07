@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 5 - Percentage keyframes</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter5/animpctkeyframes.css">
+	</head>
+        
+    <body>
+       <header>
+            <h1>Advanced CSS Code Examples: Chapter 5</h1>
+            <a href="../">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2>The <code>animation-fill-mode</code> property</h2> 
+            <p>Click the button below to play the animation. Select an <code>animation-fill-mode</code> value to see its effect.
+            <section class="animate">
+                 <form id="pickfillmode">
+                    <fieldset>
+                    <legend>Choose an <code>animation-fill-mode</code></legend>
+
+                    <div class="flex">
+                        <div> 
+                            <input type="radio" name="animation-fill-mode" id="none" value="none" checked>
+                            <label for="none" class="mono">none</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="animation-fill-mode" id="forwards" value="forwards">
+                            <label for="forwards" class="mono">forwards</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="animation-fill-mode" id="backwards" value="backwards">
+                            <label for="backwards" class="mono">backwards</label>
+                        </div>    
+                        <div>
+                            <input type="radio" name="animation-fill-mode" id="both" value="both">
+                            <label for="both" class="mono">both</label>
+                        </div>
+                    </div>
+                </fieldset>
+                </form>
+                <p>
+                    <button type="button" class="trigger" data-classname="wiggle">Play animation</button>
+                </p>
+
+                <div class="svgwrap delay1s">
+                    <img src="../../images/csscircle.svg">
+                </div>
+               
+            </section>
+
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+   
+
+        <script type="text/javascript" src="../../js/chapter5/fill-mode.js"></script>
+
+    </body>
+</html>

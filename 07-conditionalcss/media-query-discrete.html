@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Using Discreet Media Feature Queries | Advanced CSS: Chapter 7</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter7/mq.css">
+    </head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 7</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2>Media query using a discrete type feature</h2>
+             
+            <form>
+                <p>
+                    <input type="checkbox" id="chkbx" name="chkbx">
+                    <label for="chkbx">This is a checkbox label</label>
+                </p>         
+            </form>
+
+             
+            <p>If <code>matchMedia('(hover: hover)').matches</code> is <em>true</em>, you will see a pink background behind the label, and a double border around it. </p>
+
+            <p>If (<code>matchMedia('(hover: on-demand)').matches</code> is <em>true</em>, you will see a green background behind the label, and a dashed border around it.</p>
+
+            <p>If you do not see a background color <em>at all</em>, your browser doesn't yet support this feature query.</p>
+          
+        </main>
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+    </body>
+</html>

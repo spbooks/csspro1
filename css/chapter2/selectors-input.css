@@ -1,0 +1,129 @@
+label {
+  font-weight: 800;
+  cursor: pointer;
+}
+
+[type=number] {
+  text-align: right;
+  padding-right: 2em;
+}
+
+[type=checkbox],
+[type=radio] {
+  opacity: 0;
+}
+[type=checkbox] + label,
+[type=radio] + label {
+  /* Custom checkboxes and radio buttons */
+  font-weight: inherit;
+  position: relative;
+}
+[type=checkbox] + label::before,
+[type=radio] + label::before {
+  -webkit-transition: 250ms background-color;
+  transition: 250ms background-color;
+  background: #fff;
+  content: '';
+  display: inline-block;
+  border: 1px solid #444;
+  box-shadow: inset 0 0 2px #777;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 1em;
+  margin-left: -1.3em;
+  vertical-align: middle;
+}
+[type=checkbox]:checked + label::before,
+[type=radio]:checked + label::before {
+  background: #4caf50;
+  border-color: inherit;
+}
+[type=checkbox]:required + label:before,
+[type=radio]:required + label:before {
+  border-color: #ffc107;
+}
+[type=checkbox]:valid + label:before,
+[type=radio]:valid + label:before {
+  border-color: #9e9e9e;
+}
+
+[type=radio] + label::before {
+  border-radius: 100%;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=color]),
+select {
+  border-radius: 2px !important;
+  display: block;
+  padding: .5rem;
+  width: 100%;
+}
+
+select {
+  background: #fff;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  width: 50%;
+}
+
+legend {
+  font-weight: 800;
+  margin: 0;
+}
+
+input:required, select:required {
+  border: 1px solid #ffc107;
+}
+
+input:invalid,
+select:invalid {
+  border: 1px solid #f44336;
+  box-shadow: none;
+}
+
+select:valid,
+input:valid {
+  border: 1px solid #4caf50 !important;
+}
+
+input:disabled,
+select:disabled {
+  border: 1px solid #ccc;
+}
+
+:out-of-range {
+  background: #ffeb3b;
+}
+
+:in-range {
+  background: #ffffff;
+}
+
+button:disabled {
+  opacity: .5;
+}
+button:disabled:hover {
+  background: #dedede;
+}
+
+.columns2 {
+  display: flex;
+}
+
+.no-bullets li {
+  margin: .25rem 0 .25rem -40px;
+  list-style: none;
+}
+
+@media (min-width: 440px) {
+  .columns2 {
+    display: inherit;
+  }
+
+  fieldset {
+    width: auto;
+  }
+}

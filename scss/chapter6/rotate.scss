@@ -1,0 +1,42 @@
+@import "includes/mixins";
+@import "dice";
+
+#rotate {
+	font-size: 1em;
+	font-size: 1.2vw;
+	height: 15em;
+	height: 15vw;
+	margin: 4em auto;
+	padding: 1em;
+	padding: 1vw;
+	width: 15em;
+	width: 15vw;
+	pointer-events: none;
+	@include transform-style(preserve-3d);
+}
+#output {
+	font-size: 2rem;
+	margin-top: 2rem;
+}
+
+[type=range] {
+	display:inline-block;
+	width: 100%;
+}
+
+.dimen {
+	perspective: 200px;
+}
+
+.mono{
+	font-family: monospace;
+}
+
+.unit {font-weight: normal}
+
+.animate {
+	@include transition(2s); 
+}
+.r540{
+	@include transform(rotate(540deg));
+}

@@ -1,0 +1,108 @@
+@import "includes/config";
+@import "includes/mixins";
+
+table {
+    border: 1px solid rgba($border1, .5);
+    margin: 1em auto;
+    width: 80%;
+
+}
+thead {
+    background: rgba($border1,.7);
+    color: #fff;
+}
+th:first-child {
+    text-align: left;
+}
+th:last-child {
+    text-align: right;
+    text-align: decimal;
+}
+th,td {
+    padding: .2rem 1rem;
+}
+tbody tr{
+    border-bottom: 1px solid rgba($border1, .2)
+}
+tr:nth-child(even){
+   background: rgba($border1, .1);
+}
+td:first-child {
+   width: 40%;
+}
+td:nth-child(2),
+td:nth-child(3){
+   text-align: center;
+   width: 20%;
+}
+td:last-child {
+    text-align: right;
+    width: 20%;
+}
+
+.nth-wrap {
+    clear:both;
+    margin-bottom: 2em;
+
+    &::after, &::before {
+        content: ' ';
+        display: block;
+        clear: both;
+    }
+}
+
+.nth-item {
+    @include transition(250ms background-color);
+    background: #673ab7;
+    color: #fff;
+    font-size: 20px;
+    float: left;
+    margin: 0 1em 1em 0;
+    padding: 5px;
+    text-align: center;
+    width: 10vw; 
+}
+
+p.nth-item {
+    border-radius: 1000px;
+}
+
+.matched {
+    background: #cddc39;
+    color: #121212;
+    font-weight:bold;
+}
+
+#nth-form {
+    margin: 1em 0 2em;
+    border-radius: 2px;
+    background: rgba(#607d8b, .1);
+    border: 1px solid rgba(#607d8b, .3);
+
+    div {
+        border-radius: 2px;
+        text-align: center;
+        margin: .5rem;
+
+        &:first-child {
+            background: rgba(#607d8b, .1);
+            border: 1px solid rgba(#607d8b, .3);
+            font-size: 2.5em;
+        }
+    }
+
+    input {
+        border: 1px solid #aaa;
+        border-radius: 2px;
+        padding: .7em 1em;
+    }
+    button{ margin-left: .5em;}
+}
+
+li:only-child, .only-child {
+    color: #9c27b0;
+    font-size: 1.5em;
+    list-style-type: circle;
+    list-style-type: "\00A0\2660\00A0";
+}
+ 

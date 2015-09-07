@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: SVG, Media Queries and background-size</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/chapter9/svg.css">
+        <script src="../js/html5shiv.min.js"></script>
+    </head>
+    <body class="svgmqbg">
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 4</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">
+        <div>
+           <h1>
+            Using SVG with media queries in a background image
+            </h1>
+            <form>
+                <ul class="flex">
+                    <li>
+                    <input type="radio" id="small" name="bgsize" value="small"  checked>
+                    <label for="small" class="mono"><span>background-size: 100px auto</span></label>
+                    </li>
+                    
+                    <li>
+                    <input type="radio" id="medium" name="bgsize" value="medium" >
+                    <label for="medium" class="mono"><span>background-size: 200px auto</span></label>
+                    </li>
+                
+                    <li>
+                    <input type="radio" id="large" name="bgsize" value="large">
+                    <label for="large" class="mono"><span>background-size: 300px auto</span></label>
+                    </li>
+                </ul>
+            </form>
+            <p><a href="../images/svgmqbg.svg">View the image</a></p>
+            
+        </div>  
+        </main>
+        
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint, Ltd. &copy; 2015.
+            </p>
+        </footer>
+        <script type="text/javascript">
+        var update = function(e) {
+            var classlength = document.body.classList.length;
+            
+            while(classlength--) {
+                if (document.body.classList.item(classlength) !== 'svgmqbg') {
+                    document.body.classList.remove(document.body.classList.item(classlength));
+                }
+            }
+            document.body.classList.add(e.target.value);
+        };
+        var setinitial = function(){
+            document.body.classList.add( document.querySelector('input:checked').value ); 
+        }
+        
+        document.querySelector('form').addEventListener('change', update);
+        window.addEventListener('load', setinitial);
+        
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,77 @@
+.ttf {
+	background: #E8FAF6;
+	border: 1px solid #0c9;
+	border-radius: 3px;
+	height: auto;
+	margin: 1em 0;
+	padding: 2em;
+	position: relative;
+
+  &:before, &:after {
+	 display: block;
+	 clear: both;
+  }
+
+  h3 {
+  	margin: -10px 0 0 0;
+    font-size: 18px;
+  }
+
+  div {
+  	background: #00CC99;
+  	height: 5em;
+    height: 5vw;
+  	margin: 10px 0;
+  	position: relative;
+  	left: 0;
+  	top: 0;
+  	transition-duration: 2s;
+  	width: 5em;
+    width: 5vw;
+    max-height: 75px;
+    max-width: 75px;
+  }
+
+  .moved {
+  	left: 70%;
+  }
+
+  .linear {
+  	transition-timing-function: linear;
+  }
+
+  .easein {
+  	transition-timing-function: ease-in;
+  }
+
+  .easeout {
+  	transition-timing-function: ease-out;
+  }
+
+  .easeinout {
+  	transition-timing-function: ease-in-out;
+  }
+
+  .stepstart {
+  	transition-timing-function: step-start;
+  }
+
+  .stepend{
+  	transition-timing-function: step-end;
+  }
+
+  .step5start{
+  	transition-timing-function: steps(5,start);
+  }
+
+  .step5end{
+  	transition-timing-function: steps(5,end);
+  }
+
+  button {
+  	position: absolute;
+  	right: 5vw;
+  	bottom: 30%;
+  }
+}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master Code Examples</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/chapter9/svg.css">
+        <script src="../js/html5shiv.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 9</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content"> 
+            <h1>Twinkling star</h1> 
+            <div><button type="button">Toggle animation</button></div>
+ 
+            <svg version="1.1" id="twinkler" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" xml:space="preserve">
+            
+            <g>
+               <polygon class="star" points="77,23.7 98.2,66.6 145.5,66.5 111.2,106.9 
+                119.3,154 77,131.8 34.7,154 42.8,106.9 8.5,67.5 55.8,66.6 "/>
+                <polygon class="star pulse-and-fade" points="77,23.7 98.2,66.6 145.5,66.5 111.2,106.9 
+                119.3,154 77,131.8 34.7,154 42.8,106.9 8.5,67.5 55.8,66.6 "/>
+            </g>
+        </svg>
+            <a href="http://codepen.io/webinista/pen/bdYXrO">A slightly more complex example</a>
+        </main>
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint, Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+    <script>
+        document.querySelector('button').addEventListener('click', function(e) {
+            var star = document.querySelector('.star:last-child');
+            
+            if (star.classList.contains('twinkle')) {
+                star.classList.toggle('pause');   
+            } else {
+                star.classList.toggle('twinkle');
+            }                 
+        })
+    </script>
+    </body>
+</html>

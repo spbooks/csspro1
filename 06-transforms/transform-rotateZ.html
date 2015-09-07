@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 6 - transform-origin</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter6/rotate.css">
+   </head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 6</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2><code id="output">transform: rotate(<span>0</span>deg)</code></h2>
+            <p class="note"><code>rotate</code> and <code>rotateZ</code> work the same way.</p>
+            <p>Adjust the slider to rotate the object below.</p>
+
+            
+            <div class="flex">
+                <b>-360</b>
+                <input type="range" id="angle" name="angle" min="-360" max="360" value="0" step="5">
+                <b>360</b>
+            </div>
+           
+            <object id="rotate" data="../../images/csscircle.svg" type="image/svg+xml"></object>
+
+           
+            <div class="flexl conversion">
+                <div>Unit conversions:</div>
+                <div class="mono"><b class="unit">0</b>rad</div>
+                <div class="mono"><b class="unit">0</b>grad</div>
+                <div class="mono"><b class="unit">0</b>turn</div>
+            </div>
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+
+        <script type="text/javascript">    
+            var rulestr = '#rotate{transform: rotate(%s)';         
+        </script>
+	    <script type="text/javascript" src="../../js/convertangles.min.js"></script>
+		<script type="text/javascript" src="../../js/escapereset.js"></script>
+        <script type="text/javascript" src="../../js/chapter6/rotations.js"></script>
+    </body>
+</html>

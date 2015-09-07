@@ -1,0 +1,18 @@
+@import "includes/mixins";
+
+form{
+	position: relative;
+	z-index:3;
+}
+
+[type=range]{
+	margin-right: 1em;
+	width: 90%;
+}
+.perpfunc {
+	background: rgba(#673ab7, 1);
+	width: 300px;
+	height: 300px;
+	margin: auto;
+}
+

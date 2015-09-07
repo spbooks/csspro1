@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>:nth-of-type() (Advanced CSS)</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/chapter2/selectors-nth-child.css">
+        <script type="text/javascript" src="../js/chapter2/selectors.js" defer></script>
+    </head>
+    <body>
+     	<header>
+            <h1>Advanced CSS Code Examples: <code>:nth-last-of-type()</code></h1>
+            <a href="./">Back to listing</a>
+       	</header>
+
+		<main>
+            <h2>Using <code>:nth-last-of-type()</code></h2>
+
+            <p>Adjust the step and offset values to understand how the <a href="http://dev.w3.org/csswg/css-syntax/#anb-microsyntax"><em>An+B</em> microsyntax</a> works.</p>
+
+            <form id="nth-form" data-prop='{"el":"p","pseudoclass":":nth-last-of-type"}'>
+                <div id="output" class="mono">:nth-last-of-type(<span>0n+0</span>)</div>
+                <div>
+                    <label for="step">Step</label>
+                    <input type="number" id="step" step="1" name="step" value="0">
+            
+                    <label for="step">Offset</label>
+                    <input type="number" id="offset" step="1" name="offset" value="0">
+                    <button type="submit">Update</button>
+                    <button type="reset">Reset</button>
+                </div>                         
+            </form>
+
+
+            <section id="nth-wrap">
+
+            <div class="nth-item">1</div><p class="nth-item">2</p><div class="nth-item">3</div><p class="nth-item">4</p><p class="nth-item">5</p><div class="nth-item">6</div><p class="nth-item">7</p><p class="nth-item">8</p><div class="nth-item">9</div><p class="nth-item">10</p><div class="nth-item">11</div><p class="nth-item">12</p><p class="nth-item">13</p><div class="nth-item">14</div><p class="nth-item">15</p><div class="nth-item">16</div><p class="nth-item">17</p><p class="nth-item">18</p><div class="nth-item">19</div><div class="nth-item">20</div>  <div class="nth-item">21</div><div class="nth-item">22</div><div class="nth-item">23</div><div class="nth-item">24</div><div class="nth-item">25</div>
+
+            </section>
+		</main>
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint, Ltd. &copy; 2015.
+            </p>
+        </footer>
+    </body>
+</html>

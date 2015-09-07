@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 6 - rotate3d</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter6/rotate.css">
+        <style>
+        #rotate{}
+        </style>
+   </head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 6</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2><code id="output">transform: rotate3d(<span>0</span>, <span>0</span>, <span>0</span>, <span>0</span>deg)</code></h2>
+            
+            <form>
+                <p>Adjust the slider to rotate the object below. (
+                    <input type="checkbox" id="addpersp" name="addpersp">
+                    <label for="addpersp">Add <code>perspective: 200px</code> to container</label>)
+                </p> 
+            
+                <div class="flex">
+                    <div>
+                        <label for="xvector">X-vector</label>
+                        <input id="xvector" name="xvector" type="number" value="0">
+                    </div>
+
+                    <div>
+                        <label for="yvector">Y-vector</label>
+                        <input id="yvector" name="yvector" type="number" value="0">
+                    </div>
+
+                    <div>
+                        <label for="zvector">Z-vector</label>
+                        <input id="zvector" name="zvector" type="number" value="0">
+                    </div>
+
+                    <div>
+                        <label for="degree">degree</label>
+                        <input id="degree" name="degree" type="number" value="0">
+                    </div>
+                </div> 
+                <p><button type="reset">Reset</button></p>
+            </form>
+           
+            <object id="rotate" data="../../images/csscircle.svg" type="image/svg+xml"></object>
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+
+        <script type="text/javascript">    
+            var rulestr = '#rotate{transform: rotate3d(%s)';         
+        </script>
+		<script type="text/javascript" src="../../js/convertangles.min.js"></script>
+		<script type="text/javascript" src="../../js/escapereset.js"></script>
+        <script type="text/javascript" src="../../js/chapter6/rotate3d.js"></script>
+    </body>
+</html>

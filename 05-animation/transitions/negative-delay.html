@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 5 - Negative delay</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter5/negative-delay.css">
+	</head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 5</h1>
+            <a href="../">Back to listing</a>
+        </header>
+
+        <main class="content">  
+           <h2>Negative <code>transition-delay</code></h2>
+           <p>Click to <button type="button" class="all">trigger all</button> transitions. </p>
+
+            <section>
+                <h3><code>transition-delay: 0s</code></h3>
+                <div></div>
+            </section>
+
+            <section>
+                <h3><code>transition-delay: -1s</code></h3>
+                <div class="delay1s"></div>
+            </section>
+
+            <p>Click to <button type="button" class="all">trigger all</button> transitions. </p>
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+
+        <script type="text/javascript">
+            var triggerall = document.getElementsByClassName('all');
+
+            Array.prototype.map.call(triggerall, function(b){
+                b.onclick = function(evt) {
+                    var movethese = document.querySelectorAll('section > div');
+                    Array.prototype.map.call(movethese, function(o) {
+                        o.classList.toggle('moved');
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

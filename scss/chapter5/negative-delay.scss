@@ -1,0 +1,42 @@
+section {
+	background: #ececff;
+	border: 1px solid #96f;
+	border-radius: 3px;
+	height: auto;
+	margin: 1em 0;
+	padding: 2em;
+	position: relative;
+
+  &:before, &:after {
+	   display: block;
+	   clear: both;
+  }
+
+  h3 {
+  	margin: -10px 0 0 0;
+    font-size: 18px;
+  }
+
+  div {
+  	background: #96f;
+  	height: 5em;
+    height: 10vw;
+  	margin: 10px 0;
+  	position: relative;
+  	left: 0;
+  	top: 0;
+  	transition: 2s ease-in;
+  	width: 5em;
+    width: 10vw;
+    max-height: 200px;
+    max-width: 200px;
+  }
+}
+
+.moved {
+  left: 90%;
+}
+
+.delay1s {
+  transition-delay: -1s;
+}

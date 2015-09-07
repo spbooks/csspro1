@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: box-sizing: border-box</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter4/box-sizing.css">
+        <script src="../js/chapter4/box-sizing.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 4</h1>
+            <a href="../">Back to listing</a>
+        </header>
+
+        <main class="content">
+            <h2>Using <code>box-sizing</code><code> </code></h2>
+            <p>Select a value to see its effect on the layout below. Both of the yellow boxes have an initial <code>box-sizing</code> value of <code>content-box</code>. The first box has a <code>width</code> value of 60%. The second has a <code>width</code> value of 40% (<a href="http://www.w3.org/TR/css3-ui/#box-sizing">Related specification</a>).</p>
+            <form id="change-box-sizing">
+               <p></p>
+                <div class="flex flexl">
+                    <p>
+                        <input type="radio" name="box-sizing" id="content-box" value="content-box" checked>
+                        <label for="content-box"><code>content-box</code></label>
+                    </p>
+                    <p>
+                        <input type="radio" name="box-sizing" id="border-box" value="border-box">
+                        <label for="border-box"><code>border-box</code></label>
+                    </p>
+                </div>
+            </form>
+
+            <div class="box-sizing-wrapper">
+                <article class="primary"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></article>
+
+                <aside class="secondary"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></aside>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+    </body>
+</html>

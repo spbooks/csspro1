@@ -1,0 +1,43 @@
+[id=change-box-sizing] {
+  margin: 1em 0;
+}
+[id=change-box-sizing] p {
+  -webkit-flex: 0 1 50%;
+  -ms-flex: 0 1 50%;
+  flex: 0 1 50%;
+  width: 50%;
+  padding: .5em 0;
+}
+
+.box-sizing-wrapper {
+  background: #9e9e9e;
+  margin: auto;
+}
+.box-sizing-wrapper article,
+.box-sizing-wrapper aside {
+  background: #FFEB3B;
+  box-sizing: content-box;
+  border: 10px solid #9C27B0;
+  float: left;
+  padding: 10px;
+}
+.box-sizing-wrapper::after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+.box-sizing-wrapper p {
+  margin: auto;
+}
+
+.primary {
+  width: 60%;
+}
+
+.secondary {
+  width: 40%;
+}
+
+[disabled] {
+  opacity: .5;
+}

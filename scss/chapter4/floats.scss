@@ -1,0 +1,90 @@
+.fullheight{height: 100%}
+
+img {
+    box-shadow: 0 0 4px 4px #ccc;
+    float: left;
+    display: block;
+    margin: 0 2rem 2rem 0;
+    padding: 1rem;
+    width: 30%;
+}
+
+h1{margin-bottom: 1rem;}
+p{padding: 0; margin-top: 0}
+
+.content{
+    position: relative;
+    height: inherit;
+
+    &::after{
+        content: ' ';
+        display: block;
+    }
+}
+
+.content > .col {
+    float: left;
+    border: 12px solid #fffffe;
+    text-align: justify;
+    width: 50%;
+}
+
+.alpha {
+    background: #ffeb3b;
+}
+.beta {
+    background: #03a9f4;
+}
+.gamma {
+    background: #8bc34a;
+}
+.gamma.cf {
+    width: auto;
+}
+.cf {
+    clear: both;
+}
+
+._3col{
+    width: 33%;
+    height: 100%;
+    border-right: 12px solid #fffffe;
+    padding: 3px;
+    float: left;
+    overflow-y: scroll
+}
+
+.multi-col {
+    margin: 1rem;
+}
+
+[class|=multi-col] > .col {
+    border-right: 12px solid #fffffe;
+    display: table-cell;
+    padding: 3px;
+    vertical-align: top;
+    width: 33.3%;
+
+    &:last-child {
+        border-right: 0;
+    }
+
+    img{
+        float: none;
+        box-shadow: none;
+        padding: 0;
+        width: 100%;
+        margin: 0 0 1rem;
+    }
+}
+
+.multi-col-b > .col {
+    &:first-child {
+        width: 50%;
+    }
+}
+
+.gamma + div {
+     margin-top: 1rem;
+}
+

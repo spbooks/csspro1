@@ -1,0 +1,59 @@
+html, body {
+  height: 100%;
+}
+
+.square {
+  position: relative;
+}
+
+.svgwrap {
+  height: 300px;
+  margin: 100px;
+  width: 100%;
+  max-width: 300px;
+}
+.svgwrap img {
+  width: 100%;
+  display: block;
+}
+
+@-webkit-keyframes wobble {
+  from {
+    -webkit-transform: skewY(45deg);
+  }
+  50% {
+    -webkit-transform: scale(0.6);
+  }
+  to {
+    -webkit-transform: skewY(-45deg);
+  }
+}
+@keyframes wobble {
+  from {
+    transform: skewY(15deg);
+  }
+  to {
+    transform: skewY(-45deg);
+  }
+}
+.wobble {
+  -webkit-animation: wobble 3s ease-in infinite forwards alternate;
+  animation: wobble 3s ease-in infinite forwards alternate;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.running {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.half {
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+}
+
+.finite {
+  -webkit-animation-iteration-count: 5;
+  animation-iteration-count: 5;
+}

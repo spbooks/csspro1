@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Attribute selector - Hyphenated values (Advanced CSS)</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/base.css">
+        <style type="text/css">
+		
+		[class|="articlepromo"] {
+			border-top: 5px solid #4caf50;
+			color: #555;
+			line-height: 1.3;
+			padding-top: .5em;
+		}
+		
+		[class|="articlepromo"] h3 {
+			color: #000;
+			font-size: 1.2em;
+			margin:0;
+		}
+
+		[class|="articlepromo"] p {
+			margin: 0 0 1em;
+		}
+	
+		.articlepromo-entertainment {
+			border-color: #e91e63;
+		}
+		.articlepromo-sports {
+			border-color: #3f51b5;
+		}
+		
+		.articlepromo-business {
+			border-color: #00bcd4;
+		}
+		
+        </style> 
+       
+    </head>
+    <body>
+     	<header>
+            <h1>Advanced CSS Code Examples: Attribute selector - Hyphenated values</h1>
+            <a href="./">Back to listing</a>
+       	</header>
+		<main>
+			<article class="articlepromo">
+				<h3>U.S. finally ratifies Kyoto Protocol</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab eius id aliquid consectetur veritatis facilis, debitis dolorum eaque eligendi hic laborum magnam earum dolorem fugit quos modi nulla ducimus.</p>
+			</article>
+
+			<article class="articlepromo-entertainment">
+				<h3>Kardashian-Wests welcome South to the world</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab eius id aliquid consectetur veritatis facilis, debitis dolorum eaque eligendi hic laborum magnam earum dolorem fugit quos modi nulla ducimus.</p>
+			</article>
+
+			<article class="articlepromo-sports">
+				<h3>New York Knicks win NBA title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab eius id aliquid consectetur veritatis facilis, debitis dolorum eaque eligendi hic laborum magnam earum dolorem fugit quos modi nulla ducimus.</p>
+			</article>
+
+			<article class="articlepromo-business">
+				<h3>Google Buys EverythingOnTheInternet.com</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab eius id aliquid consectetur veritatis facilis, debitis dolorum eaque eligendi hic laborum magnam earum dolorem fugit quos modi nulla ducimus.</p>
+			</article>
+			
+		</main>
+		<footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint, Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+    </body>
+</html>

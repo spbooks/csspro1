@@ -1,0 +1,71 @@
+.title {
+  font-style: italic;
+  border-bottom: .1em dotted #ff5722;
+}
+
+#demo {
+  font-size: 2em;
+  background: #F6F6F6;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 1em;
+}
+#demo p {
+  margin: 0;
+}
+
+@supports (text-decoration: underline wavy #e91e63) {
+  .title {
+    border: none;
+    font-style: normal;
+    text-decoration: underline wavy #e91e63;
+  }
+}
+@supports (text-decoration-color: #e91e63) and (text-decoration-style: double) {
+  #demo a {
+    text-decoration: underline double #0c0;
+  }
+}
+@supports (text-decoration-skip: ink) {
+  #demo a {
+    text-decoration-skip: ink;
+  }
+}
+@supports not (text-decoration-style: double) {
+  #demo a {
+    text-decoration: none;
+    border-bottom: 4px double #FF9800;
+  }
+}
+.supports-flex {
+  display: table-row;
+}
+.supports-flex li {
+  display: table-cell;
+  background: #A2D9D4;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: #009688;
+  padding: .5em;
+}
+.supports-flex li:first-child {
+  border-width: 0 1px;
+}
+.supports-flex li:hover {
+  background: #673ab7;
+}
+.supports-flex a {
+  font-weight: 600;
+  color: #009688;
+  text-decoration: none;
+}
+.supports-flex li:hover a {
+  color: #fff;
+}
+
+@supports (display: flex) {
+  .supports-flex {
+    display: flex;
+    margin-left: -40px;
+  }
+}

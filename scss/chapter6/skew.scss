@@ -1,0 +1,8 @@
+@import "includes/mixins";
+@import "rotate.scss";
+
+#skew {
+	@extend #rotate;
+	background: #c09;
+	border: 2px solid #000;
+}

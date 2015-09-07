@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Multiple Column Layout (Advanced CSS)</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter4/multi-col.css">
+        <script src="../js/escapereset.js" defer></script>
+        <script src="../js/css.js" defer></script>
+        <script src="../js/chapter4/muticol.js" defer></script>
+        <style type="text/css" title="MultiColumn">
+        .multi-col {
+             columns: 1;
+        }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="demonav"><h1>Advanced CSS Code Examples: Chapter 4</h1>
+            <a href="../">Back to listing</a></div>
+        </header>
+
+
+        <main class="content">
+
+         <form id="multi">
+            <div>
+            <p>
+                <label for="column-width" class="mono">column-width:</label>
+                <input type="text" id="column-width" pattern="auto|[0-9]{1,}(px|em|rem|ch|ex|vw|vh|vmin|vmax|cm|mm|in|pt|pc)" value="auto" size="6">
+            </p>
+
+            <p>
+                <label for="column-number" class="mono">column-number: </label>
+                <input type="text" id="column-number" value="auto" size="7">
+            </p>
+
+            <p>
+                <label for="column-gap" class="mono">column-gap: </label>
+                <input type="text" id="column-gap" value="normal" pattern="normal|[0-9]{1,}(px|em|rem|ch|ex|vw|vh|vmin|vmax|cm|mm|in|pt|pc)" size="7">
+            </p>
+
+            <p>
+                <label for="column-rule-width" class="mono">column-rule-width: </label>
+                <input type="text" id="column-rule-width" value="medium" pattern="thin|thick|medium|[0-9]{1,}(px|em|rem|ch|ex|vw|vh|vmin|vmax|cm|mm|in|pt|pc)" size="7">
+                <br><span class="note">Should be a keyword such as <code>thin</code>,  <code>thick</code>,<br>or <code>medium</code>  or a length such as <code>2em</code>, or <code>10px</code>.</span>
+            </p>
+
+            <p>
+                <label for="column-rule-style" class="mono">column-rule-style: </label>
+                <select id="column-rule-style">
+                    <option>none</option>
+                    <option>dashed</option>
+                    <option>dotted</option>
+                    <option>double</option>
+                    <option>groove</option>
+                    <option>hidden </option>
+                    <option>inset</option>
+                    <option>outset</option>
+                    <option>solid</option>
+                    <option>ridge</option>
+                </select>
+            </p>
+
+             <p>
+                <label for="column-rule-color" class="mono">column-rule-color: </label>
+                <input type="text" id="column-rule-color" size="12" value="transparent">
+                <br><span class="note">Should be a valid color value.</span>
+            </p>
+            </div>
+
+            <p>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </p>
+
+         </form>
+
+          <div class="multi-col">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id odio fringilla, euismod metus at, suscipit odio. Nullam aliquam, arcu eleifend elementum pretium, sem nisl faucibus mauris, vitae mattis odio erat a nisl. Etiam et est accumsan, bibendum dolor id, posuere arcu. Quisque felis mi, lobortis vitae erat vel, lacinia ultricies nunc.</p>
+               <p><img src="../images/portrait.png"> Donec pretium, libero sit amet imperdiet laoreet, nulla tellus sollicitudin nulla, et pellentesque tellus felis auctor tortor. Duis turpis mi, malesuada in augue ut, mattis maximus metus. Proin efficitur nunc maximus odio iaculis commodo.</p>
+                <p>
+                Pellentesque luctus enim laoreet dui posuere tempor. Ut egestas nibh a nisi volutpat bibendum. Quisque purus sem, scelerisque sit amet suscipit vitae, scelerisque at tellus. Pellentesque dictum vitae lorem nec malesuada. Morbi sagittis risus urna, eget rutrum sapien interdum eu. In a est ex. Donec id ligula tellus. Nunc eget metus vel arcu pellentesque euismod. Ut vel ipsum urna. Cras finibus elit sapien, et rutrum ipsum venenatis eu. In et neque sed magna congue malesuada.
+                </p>
+                 <p>
+                Duis at egestas urna. Nam sed elementum lectus. Cras eu suscipit libero, id placerat mauris. Proin convallis justo eget dui pulvinar posuere. Vivamus sodales suscipit diam, pharetra placerat tortor molestie eget. Aliquam finibus consectetur nibh nec vestibulum. Pellentesque vitae ante sit amet arcu tristique elementum bibendum ac diam. Phasellus tempor dolor eu sagittis euismod.
+                </p>
+              <p>
+                In sed metus eu lectus rhoncus mollis. Nullam ut massa vulputate, consectetur lorem a, egestas sem. In ornare, leo eget congue aliquet, ligula nulla tempor metus, quis tristique eros metus in ligula. Aenean at feugiat ligula. Etiam at blandit lectus. Donec id rutrum risus, nec mattis turpis. Phasellus erat ante, sollicitudin quis pharetra a, bibendum eget nunc. Suspendisse dapibus ut sapien vitae placerat.
+                </p>
+               <p>
+                Etiam posuere orci ornare risus elementum tempus. Donec iaculis id tortor at hendrerit. Nulla eget justo vulputate, sodales purus et, volutpat diam. Nullam lacinia elit a accumsan cursus. Etiam eu lacus sem. Pellentesque sed mi elit. Proin dapibus nisl nec lectus aliquet consectetur. Nulla at tempor turpis. Ut et nunc a libero commodo accumsan vitae non odio. Proin dignissim, purus non sollicitudin aliquam, ex libero tincidunt nisl, sit amet posuere eros ipsum eu purus.
+                </p>
+               <p>
+                Suspendisse nec elementum sem. Fusce quis odio dictum, placerat elit in, scelerisque mauris. Vestibulum elementum tortor vel eros elementum mollis. Nulla ut mauris mollis neque dignissim maximus sed nec lectus. Curabitur a blandit quam. Aliquam erat volutpat. Phasellus eget gravida ex. Vivamus tristique, ligula ac facilisis convallis, nisi turpis maximus mi, eget tincidunt leo felis a nulla. Nullam pulvinar justo auctor, ornare ante vel, fringilla nisl. Phasellus eget lorem sagittis, aliquam neque a, dictum nisi. Nulla dolor odio, vulputate eget mollis et, aliquam at augue. Aliquam magna tortor, ornare in tortor at, porta hendrerit neque. Nulla faucibus nisi velit, sit amet lobortis lacus hendrerit vel. Vestibulum et interdum velit.
+                </p>
+                <p>
+                Quisque pulvinar volutpat lectus vitae ultricies. Praesent non turpis eget dolor hendrerit feugiat. Quisque vitae nisl vel nunc aliquam bibendum. Integer in tempus massa. Maecenas convallis dapibus tristique. Cras egestas viverra molestie. In cursus arcu quis lacus sodales congue. Quisque at nisl sapien. Phasellus magna sem, rutrum id commodo et, faucibus eget urna. Mauris dictum neque quis lacus egestas, nec varius felis consequat. Aliquam nulla nisi, vehicula id dui a, mattis tincidunt eros. Donec hendrerit molestie mi, sit amet laoreet nibh rhoncus at. Suspendisse mollis lorem nisi, nec malesuada nulla imperdiet id. Fusce malesuada, turpis eget ultricies facilisis, diam turpis cursus nunc, vel tristique ex odio vitae elit. Nullam in est in eros sagittis elementum.
+                </p>
+                <p>
+                Curabitur nec bibendum libero. Fusce sollicitudin turpis molestie justo posuere faucibus. Etiam vel convallis odio, quis finibus sapien. Nunc pulvinar posuere ipsum, eget imperdiet tellus semper gravida. Pellentesque a ex dapibus, tincidunt arcu vel, hendrerit dolor. Donec placerat maximus justo. Fusce mi elit, semper at felis id, commodo aliquam lectus. Praesent pellentesque mattis mattis. Donec aliquam tristique varius. Aliquam id placerat neque, nec egestas nisi. Nulla dignissim posuere est, vel rutrum urna bibendum at. Aenean non lobortis lorem, congue interdum magna.
+                </p>
+                <p>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed sodales nisl enim, id volutpat ipsum ultricies in. Curabitur lacus ex, venenatis imperdiet condimentum vitae, tempor et nisl. Aenean scelerisque mi eget nisl scelerisque volutpat. Integer porttitor elit dolor, in aliquam ex egestas ut. Cras hendrerit commodo dui, nec iaculis tortor mattis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor nunc diam, quis mollis felis vestibulum vel. Praesent convallis lectus eget augue bibendum varius. Suspendisse potenti. Quisque tincidunt dapibus dui, in imperdiet mi ullamcorper sit amet. Aliquam viverra malesuada tempus. Curabitur ultricies laoreet tortor sed aliquam. Nulla malesuada ligula sapien, non pretium nunc aliquet at.
+                </p>
+                <p>
+                Etiam ac porta nibh. Etiam porttitor consectetur lorem, id euismod nibh ultricies eget. Integer et ligula a mi porta ultrices. Vivamus quis nisi scelerisque, hendrerit odio in, ullamcorper sapien. Aenean eget lectus sed velit imperdiet lacinia. Nam lacinia, mi et mattis pulvinar, ligula nisl vulputate eros, ultricies porttitor justo ligula mattis elit. Integer nunc arcu, vulputate eu sem in, sagittis porta ex.
+                </p>
+            </div>
+        </main>
+
+          <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+    </body>
+</html>

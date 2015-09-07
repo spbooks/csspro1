@@ -1,0 +1,27 @@
+@import "../includes/config";
+@import "../includes/mixins";
+
+body {
+	background: #fcf;
+	transition: 5s;
+}
+
+.change {
+	background: #0cf;
+}
+
+
+
+
+.larger {
+	font-size: $basefont * 2;
+
+	a {
+		transition: 500ms;
+
+		&:hover {
+			color: #f0c;
+		}	
+	}
+}
+

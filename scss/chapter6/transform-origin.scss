@@ -1,0 +1,130 @@
+@import "includes/mixins";
+
+.wrap {
+  margin-top: 3em;
+}
+
+form {
+  margin: auto auto 5em;
+  padding: 1em;
+  background: #eee;
+  position: relative;
+  z-index: 10;
+
+  p {
+    margin: 0 2em;
+  }
+
+}
+
+legend, fieldset {
+  border: 0;
+  font-weight: bold;
+  padding:0 
+}
+
+label {
+  cursor: pointer;
+  font-family: monospace;
+  font-weight: bold;
+  padding-left: .5rem;
+}
+
+.to {
+  height: auto;
+  padding: 2em 0;
+  position: relative;
+
+  &:before, &:after {
+   display: block;
+   clear: both;
+  }
+
+  h3 {
+    margin: -10px 0 0 0;
+    font-size: 18px;
+  }
+
+  button {
+    position: absolute;
+    right: 5vw;
+    bottom: 30%;
+  }
+
+  div {
+    background: #00CC99;
+    height: 10em;
+    height: 10vw;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 10em;
+    width: 10vw;
+    transform-box: border-box;
+  }
+
+  b {
+    display: block;
+    line-height: 10vw;
+    margin: auto;
+    text-align:center;
+  }
+}
+
+@media screen and (max-width: 1038px){
+  .to div {
+    font-size: 12px;
+  }
+}
+
+.animate {
+    @include transition(500ms);
+}
+
+.rotate {
+    @include transform(rotate(45deg));
+
+    b {
+      @include transform(rotate(-45deg));
+    }
+}
+
+.skewX {
+    @include transform(skewX(45deg));
+
+    b {
+      @include transform(skewX(45deg));
+    }
+}
+
+.scale {
+    @include transform(scale(1.5));
+
+    b {
+      @include transform(scale(1));
+    }
+}
+
+.to000 div{
+  transform-origin: 0 0;
+}
+
+.to100100 div{
+  transform-origin: 100% 100%;
+}
+
+.toneg1vw1vw div{
+  transform-origin: -1vw -1vw;
+}
+
+.to150150 div{
+  transform-origin: 150% 150%;
+}
+
+.to050 div{
+  transform-origin: 0% 50%;
+}
+
+.flex b:last-child{
+  padding: 0;
+}

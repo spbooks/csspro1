@@ -1,0 +1,43 @@
+@import "includes/mixins";
+
+section {
+	background: #FBDAE5;
+	border: 1px solid #E91E63;
+	border-radius: 3px;
+	height: auto;
+	margin: 1em 0;
+	padding: 2em;
+	position: relative;
+
+  &:before, &:after {
+	   display: block;
+	   clear: both;
+  }
+}
+
+h3 {
+  margin: -10px 0 0 0;
+  font-size: 18px;
+}
+
+div {
+  @include transform(translateX(0%)); 
+  background: #E91E63;
+  height: 5em;
+  height: 10vw;
+  margin: 3em 0 10px;
+  position: relative;
+  transition: -webkit-transform 4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 2s 500ms;
+  transition: transform 4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 2s 500ms;
+  width: 5em;
+  width: 10vw;
+  max-height: 200px;
+  max-width: 200px;
+
+}
+
+.transthem {
+  @include transform(translateX(500px)); 
+  background: #00BCD4;
+}
+

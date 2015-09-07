@@ -1,0 +1,22 @@
+@import "includes/mixins";
+
+#transform {
+	display: block;
+	float: left;
+	height: auto;
+	margin: 0em 1.5em 10em 0em;
+	width: 25vw;
+	max-width: 350px;
+}
+
+.transformed {
+	@include transform(translateX(50%));
+}
+
+ol {
+	margin-left: 2em;
+}
+
+li {
+	margin-left: 25vw; 
+}

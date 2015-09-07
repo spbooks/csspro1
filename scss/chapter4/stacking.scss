@@ -1,0 +1,104 @@
+@import "includes/mixins";
+
+.wrapper{
+     height: 500px;
+}
+
+.rel {
+    position: relative;
+    min-height: 300px;
+}
+
+div{
+    min-width: 300px;
+    padding: 10px;
+}
+form {
+    margin: 2em 0;
+}
+[for="opacity"]{
+    font-weight: bold;
+}
+
+[id=b], [id=c], [id=d], [id=e], [id=f], [id=g] {
+    position: absolute;
+}
+
+[id=b], [id=c], [id=e] {
+    height: 100px;
+    line-height: 50px;
+    width: 400px;
+}
+
+[id=a] {
+    background: rgba(#e91e63,.5);
+    height: 200px;
+    text-align: right;
+    width: 500px;
+}
+[id=b] {
+    background: rgba(#673ab7, .8);
+    bottom: 120px;
+    width: 410px;
+    z-index: 2;
+
+}
+[id=c] {
+    background: rgba(#ffeb3b, .8);
+    top: 190px;
+    z-index: 1;
+}
+[id=d], [id=f], [id=g] {
+    width: 300px;
+}
+
+[id=d] {
+    background: rgba(#03a9f4, 1);
+    height: 100%;
+    top:10px;
+    z-index: -1;
+
+    p {
+        position: absolute;
+        bottom: 30px;
+    }
+}
+[id=e] {
+    background: rgba(#ff5722, .7);
+    top: 110px;
+    z-index: 1;
+}
+[id=f], [id=g] {
+    height: 200px;
+    line-height: 100px;
+    width: 400px;
+}
+
+[id=f]{
+    background: rgba(#ffc107, .9);
+
+    p{
+        background: rgba(#222, 1);
+        color: whitesmoke;
+        position: relative;
+        padding-left: 1rem;
+        z-index: 1;
+    }
+}
+
+.opa {
+    opacity: .999;
+}
+
+[id=g] {
+    background: rgba(#03a9f4, .7);
+    top: 50px;
+    left: 100px;
+
+    p{
+        bottom: 0;
+        line-height: 1;
+        position: absolute;
+        right: 1rem;
+    }
+}

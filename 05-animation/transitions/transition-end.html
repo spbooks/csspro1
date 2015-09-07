@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 5 - The transitionend event</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter5/trans-end.css">
+	</head>
+        
+    <body>
+       <header>
+            <h1>Advanced CSS Code Examples: Chapter 5</h1>
+            <a href="../">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2>Transition ends</h2>
+            <p>Please select your favorite color of the ones shown below.</p>
+            <form>
+                <ul>
+                    <li>
+                        <input type="radio" name="favecolor" id="red"><label for="red">Red</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="favecolor" id="yellow"><label for="yellow">Yellow</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="favecolor" id="blue"><label for="blue">Blue</label>
+                    </li>
+                </ul>
+
+                <div id="thanks" hidden>Thank you for selecting your favorite color.</div>
+                <button type="reset">Reset</button>
+            </form>
+          
+        </main>
+
+
+       <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+        
+
+        <script type="text/javascript">
+            var form = document.querySelector('form'), 
+                thx  = document.getElementById('thanks'),
+                changeHandler, 
+                transitionendHandler, 
+                resetHandler;
+
+            changeHandler = function(){
+                var notfave = document.querySelectorAll('input:not(:checked)');
+                Array.prototype.map.call(notfave, function(nf){
+                    nf.parentNode.classList.add('fade');
+                });
+            };
+
+            transitionendHandler = function (event) {
+                event.target.setAttribute('hidden','');
+                thx.removeAttribute('hidden');
+            };
+
+            resetHandler = function(e){
+                var notfave = document.querySelectorAll('input');
+                Array.prototype.map.call(notfave, function(nf){
+                    var pn = nf.parentNode;
+                    pn.removeAttribute('hidden');
+                    pn.classList.remove('fade');
+                });
+                thx.setAttribute('hidden','');
+            };
+
+            form.addEventListener('change', changeHandler);
+            form.addEventListener('reset', resetHandler); 
+            document.addEventListener('transitionend', transitionendHandler);
+
+        </script>
+    </body>
+</html>

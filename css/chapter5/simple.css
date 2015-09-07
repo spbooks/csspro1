@@ -1,0 +1,9 @@
+.larger {
+  font-size: 32px;
+}
+.larger a {
+  transition: 500ms;
+}
+.larger a:hover {
+  color: #f0c;
+}

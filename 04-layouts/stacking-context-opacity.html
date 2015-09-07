@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Stacking context and opacity (Advanced CSS)</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter4/stacking.css">
+        <script src="../js/chapter4/stacking.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 6</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">
+
+                <h2>Opacity and stacking context</h2>
+                <p>Toggle the control above to switch the opacity of <code>div#f</code> between 0.99 and 1. The black backgrounded paragraph is a child of <code>div#f</code> with <code>z-index: 1</code> applied.</p>
+
+                     <form>
+                         <p class="mono"><label for="opacity">opacity: </label><b id="output">1</b><br>
+                         <input type="range" min=".99" max="1" step=".01" id="opacity" name="opacity" class="toggle"></p>
+                     </form>
+
+                   <div class="rel">
+                    <div id="f">
+                        <p><b>div#f</b></p>
+                    </div>
+
+                    <div id="g">
+                        <p><b>div#g</b></p>
+                    </div>
+                    </div>
+
+                <p><code>opacity</code> values less than <code>1</code> create a local stacking context. Child elements are stacked within their parent. Elements in other stacking contexts can't (and won't) be stacked in between a child layer and its parent layer. <code>opacity</code> is not the only property that can <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">trigger</a> a local stacking context. Other properties include <code>transform</code> and <code>filter</code> when the value is something besides <code>none</code></p>
+
+
+
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+    </body>
+</html>

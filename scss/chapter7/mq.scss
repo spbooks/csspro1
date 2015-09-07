@@ -1,0 +1,98 @@
+[id=demo] {
+	display: block;
+	border-width: 1px 0;
+	border-style: solid;
+	padding: .5em;
+
+	ul {
+        list-style: none;
+		margin: 0;
+	}
+	
+	li {
+        display: block;
+        margin-left: -40px;
+    }
+}
+
+
+@media (max-width: 59.9em) {
+    [id=demo] {
+        background: #DCE3FF;
+        border-color: #94aaff;
+
+    }
+}
+
+@media (max-width: 29.9em) {
+    [id=demo] {
+        background: #fcf;
+        border-color: #f361ff;
+
+    }
+   
+}
+
+@media (min-width: 60em) {
+	[id=demo] {
+		background: #fff1c1;
+		border-color: #ffd500;
+	}
+    [id=demo] ul{
+        display: flex;
+        margin-left: -40px;
+    }
+    [id=demo] li {
+    	margin-left: 0px;
+    	padding: 0 .5em;
+    }
+}
+
+pre {
+    background: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: auto;
+    overflow-x: scroll;
+    padding: 1em;
+}
+
+@media (hover: hover) {
+    input[type=checkbox] ~ label {
+        background: #fcf;
+        border: 5px double #f0f;
+        padding: 3px;
+    }
+}
+
+@media (hover: on-demand) {
+    input[type=checkbox] ~ label {
+        padding: 1em;
+        background: #B9F1B9;
+        border: 3px dashed #390;
+    }
+    
+    form {
+        margin-bottom: 2em;
+    }
+}
+
+.mqmatches {
+    background: #f44336;
+}
+
+/*@media (hover: hover) {
+    @media (pointer: coarse) {
+        input[type=checkbox] ~ label {
+            padding: .5em;
+            background: #fc0;
+        }
+    }
+    
+    @media (pointer: fine) {
+        input[type=checkbox] ~ label {
+            padding: .5em;
+            background: #3cf;
+        }
+    }
+} */

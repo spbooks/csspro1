@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Stacking Context (Advanced CSS)</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter4/menu.css">
+    </head>
+
+    <body>
+
+        <header>
+             
+            <h1>Advanced CSS Code Examples: Chapter 6</h1>
+            <a href="./">Back to listing</a>
+             
+
+            <div id="news-header">
+
+            <object data="../images/awesomenews.svg" type="image/svg+xml"></object>
+            <button type="button" id="menu">
+               <img src="../images/menu.svg">
+            </button>
+            <nav>
+                <ul id="menu-list">
+                    <li><a href="/sports">Sports</a></li>
+                    <li><a href="/politics">Politics</a></li>
+                    <li><a href="/arts">Arts &amp; Entertainment</a></li>
+                    <li><a href="/business">Business</a></li>
+                    <li><a href="/travel">Travel</a></li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+
+    
+
+        <main class="content">
+           <section id="top-news">
+            <h1>Top News</h1>
+            <article class="articlepromo">
+                <h3>U.S. finally ratifies Kyoto Protocol</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab eius id aliquid consectetur veritatis facilis, debitis dolorum eaque eligendi hic laborum magnam earum dolorem fugit quos modi nulla ducimus.</p>
+            </article>
+
+             <article class="articlepromo">
+                <h3>U.S. elects first woman president</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab eius id aliquid consectetur veritatis facilis, debitis dolorum eaque eligendi hic laborum magnam earum dolorem fugit quos modi nulla ducimus.</p>
+            </article>
+
+            <article class="articlepromo-entertainment">
+                <h3>Kardashian-Wests welcome South to the world</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab eius id aliquid consectetur veritatis facilis, debitis dolorum eaque eligendi hic laborum magnam earum dolorem fugit quos modi nulla ducimus.</p>
+            </article>
+
+            <article class="articlepromo-sports">
+                <h3>New York Knicks win NBA title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab eius id aliquid consectetur veritatis facilis, debitis dolorum eaque eligendi hic laborum magnam earum dolorem fugit quos modi nulla ducimus.</p>
+            </article>
+
+            <article class="articlepromo-sports">
+                <h3>United States finally wins the World Cup</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab eius id aliquid consectetur veritatis facilis, debitis dolorum eaque eligendi hic laborum magnam earum dolorem fugit quos modi nulla ducimus.</p>
+            </article>
+
+            <article class="articlepromo-business">
+                <h3>Google Buys EverythingOnTheInternet.com</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab eius id aliquid consectetur veritatis facilis, debitis dolorum eaque eligendi hic laborum magnam earum dolorem fugit quos modi nulla ducimus.</p>
+            </article>
+        </section>
+        </main>
+
+
+
+        <script>
+        document.querySelector('button').onclick = function(e){
+            document.querySelector('nav').classList.toggle('open');
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 329.3 334.1" enable-background="new 0 0 329.3 334.1" xml:space="preserve">
+    <defs>
+        <style type="text/css">
+        <![CDATA[
+           line, path {
+               stroke: #000;
+           }
+           @media (width: 100px) {
+                path, line {
+                    stroke-width: 6;
+                    stroke-miterlimit: 8;
+                }
+                path {
+                    fill: #00bcd4;
+                }
+            }
+
+          @media (min-width: 200px) {
+                path, line {
+                    stroke-width: 8;
+                    stroke-miterlimit: 10;
+                }
+                path {
+                    fill: #9c27b0;
+                }
+            }
+            @media (min-width: 300px) {
+                path, line {
+                    stroke-width: 10;
+                    stroke-miterlimit: 12;
+                }
+                path {
+                    fill: #4caf50;
+                }
+            }
+        ]]>
+        </style>
+    </defs>
+	<g id="circles">
+		<path id="outermost" d="M164.1,323.3
+			c-86.5,0-156.5-70-156.5-156.5s70-156.5,156.5-156.5s156.5,70,156.5,156.5S250.6,323.3,164.1,323.3z"/>
+		<path id="circle5" d="M294.5,166.8
+			c0-72.1-58.3-130.4-130.4-130.4S33.7,94.7,33.7,166.8S92,297.2,164.1,297.2S294.5,238.9,294.5,166.8z"/>
+		<path id="circle4" d="M164.1,271.2
+			c-57.7,0-104.3-46.7-104.3-104.3S106.4,62.5,164.1,62.5s104.3,46.7,104.3,104.3S221.8,271.2,164.1,271.2z"/>
+		<path id="circle3" d="M242.3,166.8
+			c0-43.3-35-78.3-78.3-78.3s-78.3,35-78.3,78.3s35,78.3,78.3,78.3S242.3,210.1,242.3,166.8z"/>
+		<path id="circle2" d="M164.1,219
+			c-28.8,0-52.2-23.3-52.2-52.2s23.3-52.2,52.2-52.2s52.2,23.3,52.2,52.2S192.9,219,164.1,219z"/>
+		<path id="innermost" d="M190.2,166.8
+			c0-14.4-11.7-26.1-26.1-26.1S138,152.4,138,166.8s11.7,26.1,26.1,26.1S190.2,181.2,190.2,166.8z"/>
+	</g>
+	<g id="spokes">
+    <line x1="160.2" y1="167.1" x2="160.2" y2="323.1"/>
+		<line x1="164.1" y1="166.8" x2="312.9" y2="215.2"/>
+		<line x1="164.1" y1="166.8" x2="256.1" y2="40.2"/>
+		<line x1="164.1" y1="166.8" x2="72.1" y2="40.2"/>
+		<line x1="164.1" y1="166.8" x2="15.2" y2="215.2"/>
+	</g>
+</svg>

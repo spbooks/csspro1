@@ -1,0 +1,62 @@
+@import "includes/mixins";
+
+html, body{
+	height: 100%;
+}
+
+.square {
+	position: relative;
+
+}
+
+.svgwrap {
+	height: 300px;
+	margin: 100px;
+	width: 100%;
+    max-width: 300px;
+    
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+@-webkit-keyframes wobble{
+	from {
+		-webkit-transform: skewY(45deg);
+	}
+	50% {
+		-webkit-transform: scale(.6);
+	}
+	to {
+		-webkit-transform: skewY(-45deg);
+	}
+}
+
+@keyframes wobble{
+	from {
+		transform: skewY(15deg);
+	}
+	to {
+		transform: skewY(-45deg);
+	}
+}
+
+.wobble {
+	@include animation(wobble 3s ease-in infinite forwards alternate);
+    @include animation-play-state(paused);
+    
+}
+
+.running {
+	@include animation-play-state(running);
+}
+
+.half {
+	@include align-self(flex-start);
+    
+}
+
+.finite {
+	@include animation-iteration-count(5);
+}

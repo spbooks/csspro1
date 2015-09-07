@@ -1,0 +1,23 @@
+@import "includes/config";
+:first-child{
+     background: #ddd;
+}
+li {
+    &:first-child {
+        color: $txthighlight2;
+        font-weight: bold;
+    }
+    &:last-child {
+        color: $txthighlight1;
+        font-style: italic;
+    }
+}
+
+.apple {
+    color: $txthighlight2;
+    font-weight: bold;
+}
+.strawberry {
+    color: $txthighlight1;
+    font-style: italic;
+}

@@ -1,0 +1,111 @@
+table {
+  border: 1px solid rgba(96, 125, 139, 0.5);
+  margin: 1em auto;
+  width: 80%;
+}
+
+thead {
+  background: rgba(96, 125, 139, 0.7);
+  color: #fff;
+}
+
+th:first-child {
+  text-align: left;
+}
+
+th:last-child {
+  text-align: right;
+  text-align: decimal;
+}
+
+th, td {
+  padding: .2rem 1rem;
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(96, 125, 139, 0.2);
+}
+
+tr:nth-child(even) {
+  background: rgba(96, 125, 139, 0.1);
+}
+
+td:first-child {
+  width: 40%;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+  text-align: center;
+  width: 20%;
+}
+
+td:last-child {
+  text-align: right;
+  width: 20%;
+}
+
+.nth-wrap {
+  clear: both;
+  margin-bottom: 2em;
+}
+.nth-wrap::after, .nth-wrap::before {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+.nth-item {
+  -webkit-transition: 250ms background-color;
+  transition: 250ms background-color;
+  background: #673ab7;
+  color: #fff;
+  font-size: 20px;
+  float: left;
+  margin: 0 1em 1em 0;
+  padding: 5px;
+  text-align: center;
+  width: 10vw;
+}
+
+p.nth-item {
+  border-radius: 1000px;
+}
+
+.matched {
+  background: #cddc39;
+  color: #121212;
+  font-weight: bold;
+}
+
+#nth-form {
+  margin: 1em 0 2em;
+  border-radius: 2px;
+  background: rgba(96, 125, 139, 0.1);
+  border: 1px solid rgba(96, 125, 139, 0.3);
+}
+#nth-form div {
+  border-radius: 2px;
+  text-align: center;
+  margin: .5rem;
+}
+#nth-form div:first-child {
+  background: rgba(96, 125, 139, 0.1);
+  border: 1px solid rgba(96, 125, 139, 0.3);
+  font-size: 2.5em;
+}
+#nth-form input {
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  padding: .7em 1em;
+}
+#nth-form button {
+  margin-left: .5em;
+}
+
+li:only-child, .only-child {
+  color: #9c27b0;
+  font-size: 1.5em;
+  list-style-type: circle;
+  list-style-type: "\00A0\2660\00A0";
+}

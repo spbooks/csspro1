@@ -1,0 +1,230 @@
+// Transitions mixins
+
+@mixin perspective($value){
+	-webkit-perspective: $value;
+	        perspective: $value;	
+}
+
+@mixin perspective-origin($value){
+	-webkit-perspective-origin: $value;
+	        perspective-origin: $value;	
+}
+
+@mixin backface-visibility($value){
+	-webkit-backface-visibility: $value;
+	        backface-visibility: $value;	
+}
+
+@mixin transition-property($property){
+	-webkit-transition-property: $property;
+			transition-property: $property;	
+}
+
+@mixin transition-duration($duration){
+	-webkit-transition-duration: $duration;
+			transition-duration: $duration;	
+}
+
+
+@mixin transition-timing-function($timingfunction){
+	-webkit-transition-timing-function: $timingfunction;
+			transition-timing-function: $timingfunction;	
+}
+
+@mixin transition($value){
+	-webkit-transition: $value;
+			transition: $value;	
+}
+
+@mixin transform($value) {
+	-webkit-transform: $value;
+		-ms-transform: $value;
+			transform: $value;
+}
+
+@mixin transform-style($value) {
+	-webkit-transform-style: $value;
+		-ms-transform-style: $value;
+			transform-style: $value;
+}
+
+@mixin animation($value) {
+	-webkit-animation: $value;
+		    animation: $value;
+}
+
+@mixin animation-duration($value) {
+	-webkit-animation-duration: $value;
+		    animation-duration: $value;
+}
+
+@mixin animation-name($value) {
+	-webkit-animation-name: $value;
+		    animation-name: $value;
+}
+
+@mixin animation-iteration-count($value) {
+	-webkit-animation-iteration-count: $value;
+		    animation-iteration-count: $value;
+}
+
+@mixin animation-direction($value) {
+	-webkit-animation-direction: $value;
+		    animation-direction: $value;
+}
+
+@mixin animation-delay($value) {
+	-webkit-animation-delay: $value;
+		    animation-delay: $value;
+}
+
+@mixin animation-fill-mode($value) {
+	-webkit-animation-fill-mode: $value;
+		    animation-fill-mode: $value;
+}
+
+@mixin animation-play-state($value) {
+	-webkit-animation-play-state: $value;
+		    animation-play-state: $value; 
+}
+
+@mixin appearance($arg) {
+     -webkit-appearance: $arg;
+        -moz-appearance: $arg;
+}
+
+// Only using necessary flex properties
+@mixin display-flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-wrap($value) {
+     -webkit-flex-wrap: $value;
+     -ms-flex-wrap: $value;
+     flex-wrap: $value;
+}
+
+@mixin flex-grow($value) {
+     -webkit-flex-grow: $value;
+     flex-grow: $value;
+}
+
+
+@mixin flex-shrink($value) {
+     -webkit-flex-shrink: $value;
+     flex-shrink: $value;
+}
+
+@mixin flex-basis($value) {
+     -webkit-flex-basis: $value;
+     flex-basis: $value;
+}
+
+
+@mixin flex($value) {
+     -webkit-flex: $value;
+     -ms-flex: $value;
+     flex: $value;
+}
+
+@mixin justify-content($value) {
+     -webkit-justify-content: $value;
+     justify-content: $value;
+}
+
+@mixin align-items($value) {
+	-webkit-align-content: $value;
+	align-content: $value;
+}
+
+@mixin align-self($value) {
+	-webkit-align-self: $value;
+	align-self: $value;
+}
+
+// Column mixins
+@mixin column-count($value) {
+	-moz-column-count: $value;
+	-webkit-column-count: $value;
+	column-count: $value;
+}
+
+@mixin column-fill($value) {
+	-moz-column-fill: $value;
+	-webkit-column-fill: $value;
+	column-fill: $value;
+}
+
+@mixin column-gap($value) {
+	-moz-column-gap: $value;
+	-webkit-column-gap: $value;
+	column-gap: $value;
+}
+
+@mixin column-rule($value) {
+	-moz-column-rule: $value;
+	-webkit-column-rule: $value;
+	column-rule: $value;
+}
+
+@mixin column-rule-color($value) {
+	-moz-column-rule-color: $value;
+	-webkit-column-rule-color: $value;
+	column-rule-color: $value;
+}
+
+@mixin column-rule-style($value) {
+	-moz-column-rule-style: $value;
+	-webkit-column-rule-style: $value;
+	column-rule-style: $value;
+}
+
+@mixin column-rule-width($value) {
+	-moz-column-rule-width: $value;
+	-webkit-column-rule-width: $value;
+	column-rule-width: $value;
+}
+
+@mixin column-span($value) {
+	-moz-column-span: $value;
+	-webkit-column-span: $value;
+	column-span: $value;
+}
+
+@mixin column-width($value) {
+	-moz-column-width: $value;
+	-webkit-column-width: $value;
+	column-width: $value;
+}
+
+@mixin columns($value) {
+	-moz-columns: $value;
+	-webkit-columns: $value;
+	columns: $value;
+}
+
+@mixin column-overflow($value) {
+	-moz-column-overflow: $value;
+	-webkit-column-overflow: $value;
+	column-overflow: $value;
+}
+
+@mixin break-before($value) {
+    -webkit-column-break-before: $value;
+	-moz-break-before: $value;
+	break-before: $value;
+}
+
+@mixin break-after($value) {
+    -webkit-column-break-after: $value;
+	-moz-break-after: $value;
+	break-after: $value;
+}
+
+@mixin break-inside($value) {
+    -webkit-column-break-inside: $value;
+    -moz-break-inside: $value;
+	break-inside: $value;
+}

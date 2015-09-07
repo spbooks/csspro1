@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 6 - perspective property</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter6/carousel.css">
+   </head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 6</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2>
+                <code id="output">perspective: <span>none</span></code>
+            </h2>
+        
+            <p>Adjust the slider to adjust the perspective of the stage.</p> 
+            
+            <form>
+            <div class="flex">
+                <b>0</b>
+                <input type="range" id="psp" name="psp" min="0" max="2000" value="0">
+                <b>2000px</b> 
+                <button type="reset">Reset</button>
+            </div>
+            
+            </form>
+            <div id="perspective" class="carousel">
+                <div class="wrapper p3d">
+                    <figure class="perp">a</figure>
+                    <figure class="perp">b</figure>
+                    <figure class="perp">c</figure>
+                    <figure class="perp">d</figure>
+                    <figure class="perp">e</figure>
+                    <figure class="perp">f</figure>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+        <script type="text/javascript">    
+            var rulestr = '#perspective{-webkit-perspective: %s; perspective: %s}';         
+        </script>
+		<script type="text/javascript" src="../../js/escapereset.js"></script>
+        <script type="text/javascript" src="../../js/chapter6/perspective.js"></script>
+    </body>
+</html>

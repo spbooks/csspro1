@@ -1,0 +1,64 @@
+@import "includes/config";
+@import "includes/mixins";
+
+.tabbed-widget {
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tab-body {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.tab-wrap {
+  @include display-flex;
+  text-align: center;
+  margin: 0;
+
+  a {
+    background: #333;
+    border-radius: 5px 5px 0 0;
+    flex: 0 1 33%;
+    font-weight: bold;
+    text-decoration: none;
+    @include justify-content(space-around);
+    padding: .5em 0;
+    margin-right: 1%;
+    background: lighten(#9c27b0, 10%);
+
+    &:nth-child(2) {
+      background: lighten(#00bcd4, 10%);
+    }
+    &:last-child {
+      background: #ffeb3b;
+    }
+  }
+}
+
+[id^=tab] {
+    font-weight: normal;
+    margin-left: 0;
+    padding: 1em;
+    position: absolute;
+    background: lighten(#9c27b0, 10%);
+
+    p {
+      margin:0 0 1em;
+    }
+
+    &:first-child {
+       z-index: 1;
+    }
+    &:nth-child(2) {
+      background: lighten(#00bcd4, 10%);
+     }
+    &:last-child {
+      background: #ffeb3b;
+    }
+
+    &:target {
+       z-index: 2;
+    }
+}

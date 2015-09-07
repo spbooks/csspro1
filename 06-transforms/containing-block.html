@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 6 - transform-origin</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter6/transform.css">
+    </head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 6</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2><code>transform</code> property: Containing block</h2>
+            <p>When the <code>transform</code> property has a value other than <code>none</code>, positioned children are offset relative to transformed parent rather than the root element.</p>
+
+            <p><button type="button">Toggle transform</button></p>
+            <div id="transform">
+                <p>This is an absolutely positioned child element.</p>
+            </div>
+
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+
+        <script type="text/javascript">
+            var transform = document.getElementById('transform'),
+                btn = document.querySelector('button'),
+                clickHandler = function(evt) {
+                    transform.classList.toggle('transformed');
+                }
+
+            btn.addEventListener('click', clickHandler);
+        </script>
+    </body>
+</html>

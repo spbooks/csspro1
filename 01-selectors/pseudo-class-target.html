@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Using input-related pseudo-classes (Advanced CSS)</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/chapter2/selectors-target.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Advanced CSS Code Examples: Using the <code>:target</code> pseudoclass</h1>
+            <a href="./">Back to listing</a>
+       	</header>
+
+  	    <main>
+
+            <div class="tabbed-widget">
+              <div class="tab-wrap">
+                <a href="#tab1">Tab 1</a>
+                <a href="#tab2">Tab 2</a>
+                <a href="#tab3">Tab 3</a>
+              </div>
+
+              <ul class="tab-body">
+                <li id="tab1">
+                <p>This is tab 1.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce odio leo, sollicitudin vel mattis eget, iaculis sit amet turpis. Quisque porta suscipit erat. Nulla sit amet neque eleifend diam aliquam rhoncus. Donec id congue est. Aliquam sagittis euismod tristique. Nunc aliquet iaculis ex, rutrum interdum nulla ultricies at. Curabitur turpis est, feugiat sit amet risus quis, mollis elementum libero. Cras vitae aliquet felis. Nam efficitur semper arcu a blandit. Aliquam id turpis fringilla libero gravida malesuada. Fusce auctor tincidunt vulputate.</p>
+                </li>
+                <li id="tab2">
+                  <p>This is tab 2</p>
+                  <p>Proin condimentum elit sapien, ut tempor nisl porta quis. Pellentesque vel quam efficitur, pharetra urna in, suscipit tortor. Pellentesque vel nisl sed tellus eleifend efficitur. Sed imperdiet diam sem, nec sodales libero lobortis non. Nunc semper felis sem, id pharetra lacus pellentesque tempor. Ut vitae scelerisque mauris. Nunc interdum ultricies laoreet. Nam a dui luctus, egestas enim sit amet, blandit quam. Phasellus lorem libero, sollicitudin id hendrerit a, faucibus eget nisi. Nulla et suscipit felis. Phasellus auctor nisi leo, a bibendum turpis convallis nec.</p>
+                </li>
+                <li id="tab3">
+                  <p>This is tab 3.</p>
+                  <p>Maecenas odio lectus, condimentum quis tortor eu, mollis iaculis dolor. Ut placerat sem nec libero malesuada, non tincidunt arcu varius. Donec tristique erat at fringilla rhoncus. Fusce feugiat, velit sit amet tempus semper, quam nisl cursus metus, vel consequat lorem mauris ut erat. Pellentesque nec nisi quis elit fermentum sollicitudin nec vel erat. Mauris eget pellentesque ex, ut tincidunt elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras rhoncus lacus ac dictum elementum. Donec ultrices est iaculis suscipit dapibus.</p>
+                </li>
+              </ul>
+            </div>
+
+            <script type="text/javascript">
+             [].map.call( document.querySelectorAll('a'), function(a) {
+                 a.addEventListener('click', function(e) {
+                    // e.preventDefault();
+                 });
+             });
+             </script>
+		    </main>
+
+		<footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint, Ltd. &copy; 2015.
+            </p>
+        </footer>
+    </body>
+</html>

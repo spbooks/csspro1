@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Using input-related pseudo-classes (Advanced CSS)</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/chapter2/selectors-input.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Advanced CSS Code Examples: Using input-related pseudo-classes</h1>
+            <a href="./">Back to listing</a>
+       	</header>
+		<main>
+
+            <h1>Form fields by state/status</h1>
+
+            <form method="post" action="#" enctype="multipart/form-data">
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="example: Jane Doe" required>
+                </p>
+
+                <p>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="example: jane.doe@example.com">
+                </p>
+
+                <p>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" disabled>
+                </p>
+
+                <p>
+                    <label for="jobtype">I am:</label>
+                    <select id="jobtype">
+                        <option value="">&#8212; Select &#8212;</option>
+                        <option value="1">Employed full-time</option>
+                        <option value="2">Employed part-time</option>
+                        <option value="3">Self-employed</option>
+                        <option value="5">Unemployed</option>
+                    </select>
+                </p>
+
+
+
+                 <fieldset>
+                    <legend>Do you need a special meal?</legend>
+                    <ul class="no-bullets">
+                        <li>
+                           <input type="radio" id="kosher" name="specialmeal" required>
+                           <label for="kosher">Kosher</label>
+                       </li>
+                        <li>
+                           <input type="radio" id="vegetarian" name="specialmeal" required>
+                           <label for="vegetarian">Vegetarian</label>
+                       </li>
+                        <li>
+                           <input type="radio" id="vegan" name="specialmeal" required>
+                           <label for="vegan">Vegan</label>
+                       </li>
+                        <li>
+                           <input type="radio" id="nogluten" name="specialmeal" required>
+                           <label for="nogluten">Gluten-free</label>
+                       </li>
+                    </ul>
+                </fieldset>
+                </div>
+
+                <p>
+                    <label for="picknum">Enter a number</label> (Only numbers between 10 and 50 will be in range.)
+                    <input type="number" min="10" max="50" id="picknum" name="picknum" step="1" value="0">
+                </p>
+
+                <p>
+                    <label for="month">What is your favorite date in 2015 that falls during a month that ends in <q>er</q>?</label>
+                    <input type="date" min="2015-09-01" max="2015-12-31" id="month" name="month">
+                    <span class="note"><strong>NOTE: </strong>This control only works in browsers that support <code>&lt;input type="date"&gt;</code>.</span>
+                </p>
+
+
+
+                <p><button type="submit">Register</button></p>
+            </form>
+
+		</main>
+		<footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint, Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+        <script type="application/javascript">
+        window.addEventListener('DOMContentLoaded', function(e) {
+            var date = document.querySelector('[type=date]');
+            if( typeof date.valueAsDate === "undefined") {
+                date.disabled = true;
+            }
+        });
+        </script>
+    </body>
+</html>

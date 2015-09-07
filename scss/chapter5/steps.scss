@@ -1,0 +1,13 @@
+@import "../includes/config";
+@import "../includes/mixins";
+
+body {
+	background: #fcf;
+	transition: 5s steps(5);
+}
+
+.change {
+	background: #0cf;
+}
+
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 6 - rotate3d</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter6/translate.css">
+        <style></style>
+   </head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 6</h1>
+            <a href="./">Back to listing</a>
+        </header>
+
+        <main class="content dimen">  
+            <h2>
+                <code id="output">transform: translateZ(<span>0</span>)</code>
+            </h2>
+            
+            <form>
+            <div class="flex">   
+                <label for="zdim">Z direction</label>
+                <b>-500px</b>
+                <input type="range" id="zdim" name="z" min="-500" max="500" value="0" step="5">
+                <b>500px</b>       
+            </div>
+            <p> <button type="reset">Reset</button></p>   
+            </form>
+
+            <div id="translate">
+                <div class="dice backface">
+                    <div class="d1">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                        <circle cx="100" cy="100" r="25"/>
+                        </svg>
+                     </div> 
+
+                     <div class="d2">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                        <circle cx="50" cy="50" r="25"/>
+                        <circle cx="149.9" cy="149.9" r="25"/>
+                        </svg>
+                     </div>  
+
+
+                     <div class="d3">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                        <circle cx="50" cy="50" r="25"/>
+                        <circle cx="149.9" cy="149.9" r="25"/>
+                        <circle cx="100" cy="100" r="25"/>
+                        </svg>
+                     </div>  
+
+                     <div class="d4">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                        <circle cx="50" cy="50" r="25"/>
+                        <circle cx="149.9" cy="149.9" r="25"/>
+                        <circle cx="149.9" cy="50" r="25"/>
+                        <circle cx="50" cy="149.9" r="25"/>
+                        </svg>  
+                    </div>
+
+
+                    <div class="d5">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                        <circle cx="50" cy="50" r="25"/>
+                        <circle cx="149.9" cy="149.9" r="25"/>
+                        <circle cx="149.9" cy="50" r="25"/>
+                        <circle cx="50" cy="149.9" r="25"/>
+                        <circle cx="100" cy="100" r="25"/>
+                        </svg> 
+                    </div>
+
+                    <div class="d6">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                            <circle cx="50" cy="40" r="25"/>
+                            <circle cx="149.9" cy="159.9" r="25"/>
+                            <circle cx="149.9" cy="40" r="25"/>
+                            <circle cx="50" cy="159.9" r="25"/>
+                            <circle cx="149.9" cy="100" r="25"/>
+                            <circle cx="50" cy="100" r="25"/>
+                        </svg>
+                    </div>  
+                </div>
+            </div>
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+
+        <script type="text/javascript">    
+            var rulestr = '#translate{transform: translateZ(%z)';         
+        </script>
+		<script type="text/javascript" src="../../js/escapereset.js"></script>
+        <script type="text/javascript" src="../../js/chapter6/translateZ.js"></script>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+@import "includes/mixins";
+@import "rotate.scss";
+
+$unit: px;
+$cunit: deg;
+
+$rotateby: 360/6;
+$perpwidth: 200px;
+$tangent: 0.5235987755982988; // tangent of $rotateby.
+
+/* 
+See formulas described here: 
+http://desandro.github.io/3dtransforms/docs/carousel.html
+*/
+
+$translate: ($perpwidth / 2) / $tangent;
+
+.carousel {
+	@include perspective-origin(50% -300px);
+	position: relative;
+	margin: 0 auto;
+}
+
+.wrapper {
+	position: relative;
+	width: 500px;
+	margin: auto;
+}
+
+.p3d {
+	transform-style: preserve-3d;
+}
+
+.bvv {
+	@include backface-visibility(visible);
+}
+
+.p2000 {
+	@include perspective(2000px);
+}
+
+.perp {
+	color: #212121;
+	font: 200 15vw / 1.2 sans-serif;
+	position: absolute;
+	pointer-events: none;
+	width: $perpwidth;
+	height: $perpwidth;
+	text-align: center;
+	top: -50px;
+	left: 0;
+
+	&:first-child {
+		@include transform( rotateY($rotateby#{$cunit}) translateZ($translate) );
+		background: rgba(#3f51b5, .8)
+	}
+
+	&:nth-child(2) {
+		@include transform( rotateY($rotateby*6#{$cunit}) translateZ($translate) );
+		background: rgba(#00bcd4, .8)
+	}
+
+	&:nth-child(3){
+		@include transform(rotateY($rotateby*5#{$cunit}) translateZ($translate) );
+		background: rgba(#ffeb3b, .8)
+	}
+
+	&:nth-child(4){
+		@include transform(rotateY($rotateby*4#{$cunit}) translateZ($translate) );
+		background: rgba(#f44336, .8)
+	}
+	&:nth-child(5){
+		@include transform(rotateY($rotateby*3#{$cunit}) translateZ($translate) );
+		background: rgba(#e91e63, .8)
+	}
+	&:nth-child(6){
+		@include transform(rotateY($rotateby*2#{$cunit}) translateZ($translate) );
+		background: rgba(#8bc34a, .8);
+	}
+}
+
+[type=reset] {
+	margin: 0 2em;
+}
+
+.flex p {
+	width: 20%;
+}

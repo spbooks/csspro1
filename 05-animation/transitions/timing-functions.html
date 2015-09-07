@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 5 - Transition timing functions</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter5/timing-functions.css">
+	</head>
+        
+    <body>
+        <header>
+            <h1>Advanced CSS Code Examples: Chapter 5</h1>
+            <a href="../">Back to listing</a>
+        </header>
+
+        <main class="content">  
+           <h2>Transition timing functions</h2>
+           <p>Click each button to trigger the corresponding transition or <button type="button" class="all">trigger all</button> transitions. Note these examples do not include the <code>cubic-bezier</code> function. </p>
+           <section class="ttf">
+                <h3><code>transition-timing-function: step-start</code></h3>
+                <div class="stepstart"></div>
+                <button type="button">Step-start</button>
+            </section>
+
+            <section class="ttf">
+                <h3><code>transition-timing-function: step-end</code></h3>
+                <div class="stepend"></div>
+                <button type="button">Step-end</button>
+            </section>
+
+            <section class="ttf">
+                <h3><code>transition-timing-function: steps(5,start)</code></h3>
+                <div class="step5start"></div>
+                <button type="button">step(5,start)</button>
+            </section>
+
+
+            <section class="ttf">
+                <h3><code>transition-timing-function: steps(5,end)</code></h3>
+                <div class="step5end"></div>
+                <button type="button">steps(5,end)</button>
+            </section>
+            
+            <section class="ttf">
+                <h3><code>transition-timing-function: ease</code></h3>
+                <div></div>
+                <button type="button">Ease</button>
+            </section>
+
+            <section class="ttf">
+                <h3><code>transition-timing-function: linear</code></h3>
+                <div class="linear"></div>
+                <button type="button">Linear</button>
+            </section>
+
+            <section class="ttf">
+                <h3><code>transition-timing-function: ease-in</code></h3>
+                <div class="easein"></div>
+                <button type="button">Ease-In</button>
+            </section>
+
+            <section class="ttf">
+                <h3><code>transition-timing-function: ease-out</code></h3>
+                <div class="easeout"></div>
+                <button type="button">Ease-Out</button>
+            </section>
+
+            <section class="ttf">
+                <h3><code>transition-timing-function: ease-in-out</code></h3>
+                <div class="easeinout"></div>
+                <button type="button">Ease-In-Out</button>
+            </section>
+
+            
+
+            <p>Click the button to trigger the associated transition or <button type="button" class="all">trigger all</button> transitions.</p>
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+
+        <script type="text/javascript">
+            var triggerall, btns;
+
+            triggerall = document.getElementsByClassName('all');
+            btns = document.querySelectorAll('button:not(.all)');
+
+            Array.prototype.map.call(btns,function(b){
+                b.onclick = function(evt) {
+                    evt.target.parentNode.querySelector('div').classList.toggle('moved');
+                }
+            });
+
+            Array.prototype.map.call(triggerall,function(b){
+                b.onclick = function(evt) {
+                    var movethese = document.querySelectorAll('section > div');
+                    Array.prototype.map.call(movethese, function(o) {
+                        o.classList.toggle('moved');
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

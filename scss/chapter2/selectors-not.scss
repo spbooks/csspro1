@@ -1,0 +1,59 @@
+::selection {
+    background: #4caf50;
+}
+body{
+    background-color: rgba(96,125,139,.25);
+}
+fieldset {
+    border: 0;
+    padding: 0;
+}
+fieldset + * {
+   margin: 1em 0;
+}
+legend {
+    color: #34444c;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+input:not([type=radio]):not([type=checkbox]):not([type=range]):not([type=color]):not([type=image]) {
+  border: 1px solid rgba(96,125,139,.5);
+  border-radius: 3px;
+  padding: .25em;
+  width: 100%;
+}
+input:focus {
+    background: #f1f5c9;
+}
+input:focus,
+button:focus{
+    border:1px solid #4caf50;
+    box-shadow: 0 0 3px 2px #4caf50;
+    outline: none;
+}
+button {
+   border: 0;
+   border-radius: 3px;
+   background: #607d8b;
+   color: #fff;
+   font-weight: bold;
+   padding: .5em 1em;
+}
+button:hover {
+    background: #4caf50;
+    border-color: #4caf50;
+}
+label:not(.label-radio) {
+    display:block;
+    font-weight: bold;
+}
+
+.label-radio {
+    margin-left: .25em;
+    margin-right: 1em;
+}
+
+li {
+    margin-left: -40px;
+    list-style-type: none;
+}

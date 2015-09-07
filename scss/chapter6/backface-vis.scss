@@ -1,0 +1,19 @@
+@import "includes/mixins";
+@import "rotate.scss";
+
+
+h3 {
+	font-size: 1.1em;	
+}
+
+#perspective {
+	@include perspective(500px);
+	margin-top: 4em;
+}
+
+.flex > *,
+.flexl > * {
+	margin-right: 2em;
+}
+
+@import "includes/dice.scss";

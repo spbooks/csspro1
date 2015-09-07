@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 5 - Animation events</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/chapter5/anim-play-state.css">
+	</head>
+        
+    <body>
+       <header>
+            <h1>Advanced CSS Code Examples: Chapter 5</h1>
+            <a href="../">Back to listing</a>
+        </header>
+
+        <main class="content">  
+            <h2>Detecting animation events</h2> 
+            <p>Click the button below to start the animation. The animation will run 5 times. Whenever an event fires, the <em>Event list</em> panel will update with the name of the animation that ended (wobble), and the event type.</p>
+            
+            <div class="flex">
+                <section class="animate half">
+                    <form>
+                        <p>
+                            <button type="button" class="trigger">Start animation</button>
+                            <button type="reset" class="trigger">Stop / Reset</button>
+                        </p>
+                    </form>
+                    <div class="svgwrap finite wobble running">
+                        <img src="../../images/csscircle.svg">
+                    </div>         
+                </section>
+
+                <section id="event-output" class="half">
+                    <h2>Event list</h2>
+                    <pre id="output"></pre>
+                </section>
+            </div>
+        </main>
+
+
+        <footer>
+            <p>
+                Examples from <i>Advanced CSS</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015.
+            </p>
+        </footer>
+
+   
+
+        <script type="text/javascript" src="../../js/chapter5/anim-events.js"></script>
+
+    </body>
+</html>

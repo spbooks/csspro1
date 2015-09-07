@@ -1,0 +1,130 @@
+.wrap {
+  margin-top: 3em;
+}
+
+form {
+  margin: auto auto 5em;
+  padding: 1em;
+  background: #eee;
+  position: relative;
+  z-index: 10;
+}
+form p {
+  margin: 0 2em;
+}
+
+legend, fieldset {
+  border: 0;
+  font-weight: bold;
+  padding: 0;
+}
+
+label {
+  cursor: pointer;
+  font-family: monospace;
+  font-weight: bold;
+  padding-left: .5rem;
+}
+
+.to {
+  height: auto;
+  padding: 2em 0;
+  position: relative;
+}
+.to:before, .to:after {
+  display: block;
+  clear: both;
+}
+.to h3 {
+  margin: -10px 0 0 0;
+  font-size: 18px;
+}
+.to button {
+  position: absolute;
+  right: 5vw;
+  bottom: 30%;
+}
+.to div {
+  background: #00CC99;
+  height: 10em;
+  height: 10vw;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 10em;
+  width: 10vw;
+  transform-box: border-box;
+}
+.to b {
+  display: block;
+  line-height: 10vw;
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 1038px) {
+  .to div {
+    font-size: 12px;
+  }
+}
+.animate {
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.rotate {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.rotate b {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.skewX {
+  -webkit-transform: skewX(45deg);
+  -ms-transform: skewX(45deg);
+  transform: skewX(45deg);
+}
+.skewX b {
+  -webkit-transform: skewX(45deg);
+  -ms-transform: skewX(45deg);
+  transform: skewX(45deg);
+}
+
+.scale {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.scale b {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.to000 div {
+  transform-origin: 0 0;
+}
+
+.to100100 div {
+  transform-origin: 100% 100%;
+}
+
+.toneg1vw1vw div {
+  transform-origin: -1vw -1vw;
+}
+
+.to150150 div {
+  transform-origin: 150% 150%;
+}
+
+.to050 div {
+  transform-origin: 0% 50%;
+}
+
+.flex b:last-child {
+  padding: 0;
+}

@@ -1,0 +1,27 @@
+@import "includes/mixins";
+@import "rotate.scss";
+
+
+#translate {
+	@extend #rotate;
+	pointer-events: none;	
+}
+
+b {
+	display: inline-block;
+	padding: 0 1em;
+}
+
+[for=xdim], 
+[for=ydim],
+[for=zdim] {
+	display:block;
+	clear: both;
+	width: 10%;
+}
+
+[id=xdim],
+[id=ydim],
+[id=zdim] {
+	width: 70%;
+}
