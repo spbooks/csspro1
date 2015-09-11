@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>*</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../js/html5shiv.min.js"></script>
+        <!-- <link rel="stylesheet" href="../../css/base.css"> -->
+        <link rel="stylesheet" href="http://tiffsfontbucket.s3.amazonaws.com/roboto/stylesheet.css" media="screen">
+        
+        <style type="text/css" title="FlexDemo">
+            *, 
+            *::before, 
+            *::after {
+                box-sizing: border-box;
+            }
+            body {
+                 font-family: 'robotoregular';   
+                margin: 0;
+                padding: 0;
+                
+            }
+        footer {
+            background:#3e464c;
+            border-top: 2px groove #3e464c;
+            color: whitesmoke;
+            padding: 1rem 1rem 2rem;
+            margin: 2rem 0 0 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%   
+        }
+            h2{margin: 0 0 .25rem; font-size: 18px; font-family: 'robotomedium'}
+            input, button{border: 0; font: inherit; font-size: 1.1rem; }
+            .flex {
+                 display: flex;   
+            }
+            .flex > * {
+                padding: 0 .5rem;
+               
+            }
+            .same-height {
+                 align-items: stretch;
+            }
+            .align-top {
+                align-items: flex-start;
+            }
+            input {
+                 flex: 1 0 150px;   
+            }
+            button {
+                background: #9c27b0;
+                border-color: #9C27B0;
+                border-radius: 0;
+                color: inherit;
+                flex: 0 0 80px;
+            }
+            label{
+                margin-right: 1em;
+                font-family: 'robotomedium';
+                font-size: 18px
+            }
+            .col{
+                 flex-direction: column   
+            }
+            .wrap {
+                flex-wrap: wrap
+            }
+            .taglist{
+                text-transform: capitalize;
+                list-style: none;
+                padding: 0;
+                -moz-columns: 2;
+                -webkit-columns: 2;
+            }
+            .taglist li{
+                 margin-bottom: .3rem;   
+            }
+            a{
+                color: inherit;
+                text-decoration: underline;
+                text-decoration: underline solid #9c27b0;
+            }
+            form {
+                flex-wrap: wrap;
+                flex: 0 0 30%;
+                order: 1      
+            }
+            form p {margin: .5rem 0}
+            
+            [id=topics] {
+                flex: 1 1 auto;
+                margin-left: 2rem;
+                order: -1
+            }
+            
+            [id=contact] {
+                flex: 0 0 25%;  
+            }
+            .copyright {
+                flex: 0 0 100%;
+                order: 1;
+                text-align: right;
+                font-size: .8rem;
+                padding: 0;
+              
+            }
+            .copyright b {
+                 display: inline-block;
+                 transform: scaleX(-1);
+                 font-size: 1.1em;
+            }
+            
+            @media screen and (max-width:500px) {
+                 footer.flex {
+                     flex-direction: column;
+                 }
+            
+                form {
+                     order: -1   
+                }
+               
+                [id=topics], [id=contact]{
+                    margin: 1rem 0 1rem 1rem;
+                    width: 100%;
+                    padding: 0
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+       <footer class="flex align-top wrap">
+           <form class="flex wrap">
+               <div><label>Search this site</label></div>
+               <p class="flex same-height">
+                   <input type="search">
+                   <button type="submit">Search</button>
+               </p>
+           </form>
+           <section id="topics">
+               <h2>Topics </h2>
+               <ul class="taglist">
+                  <li><a href="/tag/actionscript">actionScript</a></li>
+                   <li><a href="/tag/apache">apache</a></li>			
+                    <li><a href="/tag/css3/index.html">CSS3</a></li>
+                    <li><a href="/tag/cyberduck/index.html">cyberduck</a></li>
+                    <li><a href="/tag/devops/index.html">devOps</a></li>
+                    <li><a href="/tag/http/index.html">HTTP</a></li>
+                    <li><a href="/tag/javascript/index.html">javascript</a></li>
+                    <li><a href="/tag/s3/index.html">python</a></li>
+                    <li><a href="/tag/s3/index.html">Nginx</a></li>
+                    <li><a href="/tag/sass/index.html">Sass</a></li>
+                    <li><a href="/tag/sql">SQL</a></li>
+                    <li><a href="/tag/software/index.html">software</a></li>
+                    <li><a href="/tag/text-editor/index.html">Ruby</a></li>
+                    <li><a href="/tag/wordpress/index.html">wordPress</a></li>
+                    <li><a href="/tag/xhr">XHR</a></li>
+                </ul>
+           </section>
+           <section id="contact">
+               <h2>Contact Us</h2>
+               <p>SitePoint Pty Ltd<br>
+                48 Cambridge St,<br>
+                Collingwood VIC 3066<br>
+                Australia</p>
+           </section>
+           <p class="copyright"><b title="copy left">&copy;</b> 2015. No rights reserved.</p>
+       </footer>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>*</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../js/html5shiv.min.js"></script>
+        <!-- <link rel="stylesheet" href="../css/base.css"> -->
+        <link rel="stylesheet" href="http://tiffsfontbucket.s3.amazonaws.com/roboto/stylesheet.css" media="screen">
+        <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font: normal 14px / 1.5 'robotoregular', sans-serif;
+            background-color: lightsteelblue
+        }
+        form {padding: 1em 0; margin: auto; text-align: center}
+        
+        .flex-media {
+            display: flex;
+        }
+        
+            .flex-media > * {
+                background: #0c0
+            }
+        input[type="text"],
+        button {
+            border:0;
+            display: inline;
+            font: inherit; 
+
+       }
+       input[type="text"] {
+            flex: 1 0 auto;   
+       }
+       button {
+           background: #003;
+           color: whitesmoke;
+           display: block;
+           flex: 0 0 110px;
+           text-align: center;
+       }
+            img {
+                background: #c09;
+                width: 200px;
+                height: auto
+            }
+       
+        </style>
+        
+    </head>
+
+    <body>
+      
+
+        <main class="content">
+            <article class="flex-media">
+                <img src="../images/csscircle-blue.svg">
+                <div class="content">
+                    <h3>Let's talk about Flexbox</h3>
+                    <p>We'll dig into the intricacies of using the Flexible Box Layout module.</p>
+                </div>
+            </article>             
+        </main>
+
+
+    </body>
+</html>
