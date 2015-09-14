@@ -72,7 +72,7 @@ p.nth-item {
   border-radius: 1000px;
 }
 
-.matched {
+.matched, .first-last :first-of-type, .first-last :last-of-type {
   background: #cddc39;
   color: #121212;
   font-weight: bold;

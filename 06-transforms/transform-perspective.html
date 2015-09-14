@@ -8,13 +8,66 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../css/base.css">
+<<<<<<< HEAD
+        <style>
+        #rotate, #scale {
+		  font-size: 1em;
+		  font-size: 1.2vw;
+		  height: 15em;
+		  height: 15vw;
+		  margin: 4em auto;
+		  padding: 1em;
+		  padding: 1vw;
+		  width: 15em;
+		  width: 15vw;
+		  pointer-events: none;
+		  -webkit-transform-style: preserve-3d;
+		  -ms-transform-style: preserve-3d;
+		  transform-style: preserve-3d;
+		}
+
+		#output {
+		  font-size: 2rem;
+		  margin-top: 2rem;
+		}
+
+		[type=range] {
+		  display: inline-block;
+		  width: 100%;
+		}
+
+		.dimen {
+		  perspective: 200px;
+		}
+
+		.mono {
+		  font-family: monospace;
+		}
+
+		.unit {
+		  font-weight: normal;
+		}
+
+		.animate {
+		  -webkit-transition: 2s;
+		  transition: 2s;
+		}
+
+		.r540 {
+		  -webkit-transform: rotate(540deg);
+		  -ms-transform: rotate(540deg);
+		  transform: rotate(540deg);
+		}
+        </style>
+=======
         <link rel="stylesheet" href="../css/chapter6/scale.css">
+>>>>>>> 015420e250fa9c3084402249d4be3355a7172920
    </head>
         
     <body>
         <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 6</h1>
-            <a href="./">Back to listing</a>
+            <a href="./index.html">Back to listing</a>
         </header>
 
         <main class="content">  
@@ -25,7 +78,7 @@
             <div class="flex">
                 <b>0</b>
                 <input type="range" id="factor" name="factor" min="0" max="800" value="1" step="10">
-                <b>2</b>  
+                <b>800</b>  
             </div>
            
             <object id="scale" data="../images/csscircle.svg" type="image/svg+xml"></object>

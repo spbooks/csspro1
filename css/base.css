@@ -650,3 +650,13 @@ object {
   border: 2px solid #ffc107;
   padding: .5rem;
 }
+
+#output {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+[type=range]:not([id=opacity]) {
+  display: inline-block;
+  width: 100%;
+}

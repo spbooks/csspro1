@@ -13,7 +13,6 @@ var updateProperty = function (e) {
     if (styleObj.cssRules[0]) {
         styleObj.deleteRule(0);
     }
-console.log(rule);
     styleObj.insertRule(rule, 0);
 };
 

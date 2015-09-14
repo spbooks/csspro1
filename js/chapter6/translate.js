@@ -1,4 +1,4 @@
-var css = document.styleSheets[1], 
+var css = document.styleSheets[document.styleSheets.length-1], 
     cssRulesInitLength = css.cssRules.length,
     direction = document.querySelectorAll('[type=range]'),
     output = document.querySelector('#output span');
@@ -32,7 +32,7 @@ Array.prototype.map.call(direction, function(d){
 })    
  
 document.forms[0].addEventListener('reset', function(e){
-    var txt = document.createTextNode('0, 0'), css = document.styleSheets[1];
+    var txt = document.createTextNode('0, 0'), css = document.styleSheets[document.styleSheets.length-1];
     if( output.firstChild ) {
             output.replaceChild(txt, output.firstChild);
     }  else {

@@ -97,9 +97,8 @@ legend {
 }
 .demo {
     background: #607d8b;
-    float: left;
-    width: 50%;
     height: 600px;
+    @include flex-direction(row);
 }
 form {
     float: left;
@@ -116,9 +115,12 @@ form {
 }
 
 .demo-flex {
+	> * {
+		flex: 0 1 50%;
+	}
     @include display-flex;
-
-    li {
+	
+	li {
         font-size: .8rem;
         min-height: 6rem;
         padding: 1%;

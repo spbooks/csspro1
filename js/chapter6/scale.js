@@ -1,4 +1,4 @@
-var css = document.styleSheets[0], 
+var css = document.styleSheets[document.styleSheets.length-1], 
     cssRulesInitLength = css.cssRules.length,
     factor = document.getElementById('factor');
 
@@ -9,14 +9,14 @@ factor.addEventListener('input', function(e){
     txt = document.createTextNode(val),
     output = document.querySelectorAll('#output span');
 
-    
+
     /* Update last rule */
     if(css.cssRules.length > cssRulesInitLength ){
         css.deleteRule(css.cssRules.length - 1);
     }
     css.insertRule(rule, css.cssRules.length);
 
-    /* 
+    /*
     Update degree value. Using an array because scale accepts
     two arguments and we need to update both.
     */
@@ -28,4 +28,4 @@ factor.addEventListener('input', function(e){
             op.appendChild(t);
         }
     });
-},true);      
+},true);

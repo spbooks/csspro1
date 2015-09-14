@@ -101,9 +101,10 @@ legend {
 
 .demo {
   background: #607d8b;
-  float: left;
-  width: 50%;
   height: 600px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 form {
@@ -126,6 +127,9 @@ form {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+.demo-flex > * {
+  flex: 0 1 50%;
 }
 .demo-flex li {
   font-size: .8rem;

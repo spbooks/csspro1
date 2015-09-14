@@ -9,22 +9,46 @@
         <script src="../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/chapter7/mq.css">
+        <style>
+        /* Nested media queries */
+        @media (any-pointer) {
+            @media (any-pointer: fine) {
+                input[type=checkbox] ~ label {
+                    padding: 1em;
+                    background: #E3DBF2;
+                    border: 4px inset #673ab7;
+                    padding: .5em;
+                }
+            }
+
+            @media (any-pointer: coarse) {
+                input[type=checkbox] ~ label {
+                    padding: 1em;
+                    background: #cddc39;
+                    border: 4px inset #4caf50;
+                    padding: .5em;
+                }
+            }
+        }
+        </style>
     </head>
-        
+
     <body class="nested">
         <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 7</h1>
-            <a href="./">Back to listing</a>
+            <a href="./index.html">Back to listing</a>
         </header>
 
-        <main class="content">  
+        <main class="content">
             <h2>Nested media queries</h2>
-            
-            <p>This demo is best experienced on a device with a touch-screen or stylus-based input. In order for this to work as intended, the browser must support both the <code>hover</code> and <code>pointer</code> feature queries.</p>
-            
+
+            <p>In order for this to work as intended, the browser must support the <code>any-pointer</code>/<code>pointer</code> feature query.</p>
+
             <form>
-                <input type="checkbox" id="chkbx" name="chkbx">
-                <label for="chkbx">This is a checkbox label</label>          
+                <p>
+                    <input type="checkbox" id="chkbx" name="chkbx">
+                    <label for="chkbx">This is a checkbox label</label>
+                </p>
             </form>
         </main>
 

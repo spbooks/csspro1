@@ -13,6 +13,15 @@
   margin-left: -40px;
 }
 
+pre {
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: auto;
+  overflow-x: scroll;
+  padding: 1em;
+}
+
 @media (max-width: 59.9em) {
   [id=demo] {
     background: #DCE3FF;
@@ -41,49 +50,6 @@
     padding: 0 .5em;
   }
 }
-pre {
-  background: #f7f7f7;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin: auto;
-  overflow-x: scroll;
-  padding: 1em;
-}
-
-@media (hover: hover) {
-  input[type=checkbox] ~ label {
-    background: #fcf;
-    border: 5px double #f0f;
-    padding: 3px;
-  }
-}
-@media (hover: on-demand) {
-  input[type=checkbox] ~ label {
-    padding: 1em;
-    background: #B9F1B9;
-    border: 3px dashed #390;
-  }
-
-  form {
-    margin-bottom: 2em;
-  }
-}
 .mqmatches {
   background: #f44336;
 }
-
-/*@media (hover: hover) {
-    @media (pointer: coarse) {
-        input[type=checkbox] ~ label {
-            padding: .5em;
-            background: #fc0;
-        }
-    }
-    
-    @media (pointer: fine) {
-        input[type=checkbox] ~ label {
-            padding: .5em;
-            background: #3cf;
-        }
-    }
-} */

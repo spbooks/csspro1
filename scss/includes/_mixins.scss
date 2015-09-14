@@ -129,6 +129,12 @@
      flex: $value;
 }
 
+@mixin flex-direction($value) {
+     -webkit-flex-direction: $value;
+     -ms-flex-direction: $value;
+     flex-direction: $value;
+}
+
 @mixin justify-content($value) {
      -webkit-justify-content: $value;
      justify-content: $value;

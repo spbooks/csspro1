@@ -8,18 +8,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../css/base.css">
+        <!-- deliberately empty -->
+        <style></style>
         <link rel="stylesheet" href="../css/chapter6/backface-vis.css">
    </head>
-        
+
     <body>
         <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 6</h1>
-            <a href="./">Back to listing</a>
+            <a href="./index.html">Back to listing</a>
         </header>
 
-        <main class="content">  
+        <main class="content">
             <h2>Showing or the <code>backface-visibility</code> property</h2>
-            
+
             <p>Click the button below to toggle between <code>backface-visibility</code> states.</p>
 
             <p><code>backface-visibility:</code> <code id="value">hidden</code></p>
@@ -45,14 +47,14 @@
 
 
             <div id="perspective">
-                 
+
              <div class="dice">
                     <div class="d1 bvh">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
  viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
                         <circle cx="100" cy="100" r="25"/>
                         </svg>
-                     </div> 
+                     </div>
 
                      <div class="d2 bvh">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -60,7 +62,7 @@
                         <circle cx="50" cy="50" r="25"/>
                         <circle cx="149.9" cy="149.9" r="25"/>
                         </svg>
-                     </div>  
+                     </div>
 
 
                      <div class="d3 bvh">
@@ -70,7 +72,7 @@
                         <circle cx="149.9" cy="149.9" r="25"/>
                         <circle cx="100" cy="100" r="25"/>
                         </svg>
-                     </div>  
+                     </div>
 
                      <div class="d4 bvh">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -79,7 +81,7 @@
                         <circle cx="149.9" cy="149.9" r="25"/>
                         <circle cx="149.9" cy="50" r="25"/>
                         <circle cx="50" cy="149.9" r="25"/>
-                        </svg>  
+                        </svg>
                     </div>
 
 
@@ -91,7 +93,7 @@
                         <circle cx="149.9" cy="50" r="25"/>
                         <circle cx="50" cy="149.9" r="25"/>
                         <circle cx="100" cy="100" r="25"/>
-                        </svg> 
+                        </svg>
                     </div>
 
                     <div class="d6 bvh">
@@ -104,11 +106,11 @@
                             <circle cx="149.9" cy="100" r="25"/>
                             <circle cx="50" cy="100" r="25"/>
                         </svg>
-                    </div>  
+                    </div>
                 </div>
             </div>
 
-           
+
         </main>
 
         <footer>
@@ -117,8 +119,8 @@
             </p>
         </footer>
 
-        <script type="text/javascript">    
-            var rulestr = '.dice{ -webkit-transform: rotateX(%xdeg) rotateY(%ydeg); transform: rotateX(%xdeg) rotateY(%ydeg); }';         
+        <script type="text/javascript">
+            var rulestr = '.dice{ -webkit-transform: rotateX(%xdeg) rotateY(%ydeg); transform: rotateX(%xdeg) rotateY(%ydeg); }';
         </script>
 		<script type="text/javascript" src="../js/escapereset.js"></script>
         <script type="text/javascript" src="../js/chapter6/backface-vis.js"></script>

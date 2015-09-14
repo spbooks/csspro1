@@ -105,7 +105,7 @@
 }
 
 .back {
-  background: rgba(204, 204, 204, 0.8) url(../../images/dicediamond.svg) center;
+  background: rgba(204, 204, 204, 0.8) url(../images/dicediamond.svg) center;
   background-size: 7px auto;
   border: 10px solid #fff;
   border-radius: 8px;

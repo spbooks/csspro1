@@ -9,27 +9,27 @@
         <script src="../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/chapter6/scale.css">
+        <!-- deliberately empty -->
+        <style></style>
    </head>
-        
+
     <body>
         <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 6</h1>
-            <a href="./">Back to listing</a>
+            <a href="./index.html">Back to listing</a>
         </header>
 
-        <main class="content">  
+        <main class="content">
             <h2><code id="output">transform: scaleX(<span>1</span>)</code></h2>
-            
-            <p>Adjust the slider to scale the object below.</p> 
-            
+
+            <p>Adjust the slider to scale the object below.</p>
+
             <div class="flex">
                 <b>0</b>
                 <input type="range" id="factor" name="factor" min="-2" max="2" value="1" step=".1">
-                <b>2</b>  
+                <b>2</b>
             </div>
-           
             <object id="scale" data="../images/csscircle.svg" type="image/svg+xml"></object>
-         
         </main>
 
 
@@ -40,8 +40,8 @@
         </footer>
 
 
-        <script type="text/javascript">    
-            var rulestr = '#scale{transform: scaleX(%s)';         
+        <script type="text/javascript">
+            var rulestr = '#scale{transform: scaleX(%s)';
         </script>
 		<script type="text/javascript" src="../js/escapereset.js"></script>
         <script type="text/javascript" src="../js/chapter6/scale.js"></script>

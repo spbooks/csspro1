@@ -1,12 +1,12 @@
 var trimto2decpts = function(inp, decimalplaces){
 	var intinp, pow, mult;
 	pow = !!decimalplaces ? decimalplaces : 2;
-	
+
 	mult = Math.pow(10, pow);
 	return parseInt(inp * mult, 10) / mult;
-} 
+}
 
-var css = document.styleSheets[0], 
+var css = document.styleSheets[document.styleSheets.length-1], 
     cssRulesInitLength = css.cssRules.length;
 
 if(document.forms.length){
@@ -28,7 +28,7 @@ angle.addEventListener('input', function(e){
     }
     css.insertRule(rule, css.cssRules.length);
 
-    /* 
+    /*
     Update degree value. Using an array because skew accepts
     two arguments and we need to update both.
     */
@@ -40,7 +40,7 @@ angle.addEventListener('input', function(e){
             op.appendChild(t);
         }
     });
-    
+
 
     /* Convert degrees to other units */
     units[0] = trimto2decpts(ang.toRadians(deg));
@@ -55,11 +55,11 @@ angle.addEventListener('input', function(e){
         } else {
             u.appendChild(txt);
         }
-    }); 
-}, true)      
+    });
+}, true)
 
 if(addPersp) {
     addPersp.addEventListener('change', function(e){
         document.querySelector('.content').classList.toggle('dimen');
     }, true);
-} 
+}

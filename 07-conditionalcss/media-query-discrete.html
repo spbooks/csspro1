@@ -9,31 +9,52 @@
         <script src="../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/chapter7/mq.css">
+        <style>
+        @media (hover: hover) {
+            input[type=checkbox] ~ label {
+                background: #fcf;
+                border: 5px double #f0f;
+                padding: 3px;
+            }
+        }
+
+        @media (hover: on-demand) {
+            input[type=checkbox] ~ label {
+                padding: 1em;
+                background: #B9F1B9;
+                border: 3px dashed #390;
+            }
+
+            form {
+                margin-bottom: 2em;
+            }
+        }
+        </style>
     </head>
-        
+
     <body>
         <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 7</h1>
-            <a href="./">Back to listing</a>
+            <a href="./index.html">Back to listing</a>
         </header>
 
-        <main class="content">  
+        <main class="content">
             <h2>Media query using a discrete type feature</h2>
-             
+
             <form>
                 <p>
                     <input type="checkbox" id="chkbx" name="chkbx">
                     <label for="chkbx">This is a checkbox label</label>
-                </p>         
+                </p>
             </form>
 
-             
+
             <p>If <code>matchMedia('(hover: hover)').matches</code> is <em>true</em>, you will see a pink background behind the label, and a double border around it. </p>
 
             <p>If (<code>matchMedia('(hover: on-demand)').matches</code> is <em>true</em>, you will see a green background behind the label, and a dashed border around it.</p>
 
             <p>If you do not see a background color <em>at all</em>, your browser doesn't yet support this feature query.</p>
-          
+
         </main>
 
         <footer>

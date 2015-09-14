@@ -2,7 +2,7 @@ var init = function () {
     'use strict';
     var form = document.querySelector('form'),
         chkbxes = document.querySelectorAll('[id|=flex-basis-auto]');
-    
+
     // Functions
     var camelCaseProp,
         checkboxes,
@@ -11,6 +11,7 @@ var init = function () {
         getRuleIndex,
         preventSubmit,
         resetRules,
+        resetStyles,
         setProp,
         setFlexProp,
         updateStyles;
@@ -21,16 +22,17 @@ var init = function () {
     };
 
     getStyleSheet = function () {
-        var idx, i = 0;
+        var styleHash = {},
+            styleSheet = document.styleSheets[document.styleSheets.length-1],
+            i = 0;
 
-        while (i < document.styleSheets.length) {
-            if ("FlexDemo" === document.styleSheets[i].title) {
-                idx = i;
-            }
+        while(i < styleSheet.cssRules.length) {
+            styleHash[styleSheet.cssRules[i].selectorText] = styleSheet.cssRules[i];
             i++;
         }
-        return document.styleSheets[idx];
+        return styleHash;
     };
+
 
     camelCaseProp = function (cssprop) {
         var propSegments = cssprop.split('-'), propObj = {};
@@ -54,28 +56,9 @@ var init = function () {
         return propObj;
     };
 
-    /*
-    Get the index of the rule that matches the selector
-    passed in using item.
-    */
-    getRuleIndex = function (selector) {
-        var rules, i, sel;
-
-        rules = getStyleSheet().cssRules;
-        i = 0;
-
-        sel = (selector.charAt(0) === '.') ? selector : '.' + selector;
-
-        while (i < rules.length) {
-            if (sel === rules[i].selectorText) {
-                return i;
-            }
-            i++;
-        }
-    };
 
     updateStyles = function (e) {
-        var cn = getClassName(e.target.id)[0], idx, rule;
+        var cn = getClassName(e.target.id)[0], sel = '.'+cn;
 
         if (e.target.id.indexOf("flex-basis-auto") > -1) {
             checkboxes(e.target);
@@ -86,17 +69,40 @@ var init = function () {
             setFlexProp(cn, e.target.dataset.prop, e.target.value);
             return;
         }
-        setProp(cn, e.target.dataset.prop, e.target.value);
+        setProp(sel, e.target.dataset.prop, e.target.value);
+    };
+
+    /*
+    Duplicates updateStyles, but uses getAttribute to get start
+    value, not current value
+    */
+
+    resetStyles = function (e) {
+        var cn = getClassName(e.target.id)[0], sel = '.'+cn;
+
+        if (e.target.id.indexOf("flex-basis-auto") > -1) {
+            checkboxes(e.target);
+            return;
+        }
+
+        if (e.target.dataset.prop.match(/flex-(grow|shrink|basis)/)) {
+            setFlexProp(cn, e.target.dataset.prop, e.target.getAttribute('value'));
+            return;
+        }
+        setProp(sel, e.target.dataset.prop, e.target.getAttribute('value'));
     };
 
     setProp = function (selector, property, value) {
-        var ri = getRuleIndex(selector), ccprop = camelCaseProp(property), styles = getStyleSheet();
 
-        if (ccprop.standard in styles.cssRules[ri].style) {
-            styles.cssRules[ri].style[ccprop.standard] = value;
+        var ccprop = camelCaseProp(property),
+            styles = getStyleSheet();
+
+        if (ccprop.standard in styles[selector].style) {
+            styles[selector].style[ccprop.standard] = value;
         } else {
-            styles.cssRules[ri].style[ccprop.prefixed] = value;
+            styles[selector].style[ccprop.prefixed] = value;
         }
+
     };
 
     /* Return the class name */
@@ -114,8 +120,7 @@ var init = function () {
             nte.hidden = true;
             nte.setAttribute('aria-hidden', 'true');
             fb.value = 'auto';
-
-            setProp(getClassName(c.id)[0], 'flex-basis', 'auto');
+            setProp('.'+getClassName(c.id)[0], 'flex-basis', 'auto');
 
         } else {
             fb.disabled = false;
@@ -125,12 +130,17 @@ var init = function () {
     };
 
     resetRules = function (e) {
-        var rules, i;
-        rules = getStyleSheet();
+        /*
+        Have to duplicate code because we need
+        the attribute value, not the current value.
+        Also need to re-enable fields.
+        */
+        [].map.call(document.querySelectorAll('.demo li'), function (fxb, ind) {
+            var dp = document.querySelectorAll('[data-prop=flex-basis]');
+            setProp('.'+fxb.classList.item(0), 'flex-basis', dp[ind].getAttribute('value'));
+            dp[ind].removeAttribute('disabled');
+        });
 
-        for (i = rules.cssRules.length; i > 0; i--) {
-            rules.deleteRule(i - 1);
-        }
     };
 
     setFlexProp = function (selector, fp, value) {
@@ -143,7 +153,7 @@ var init = function () {
         flexvalue[1] = document.querySelector('#flex-shrink-' + selector).value;
         flexvalue[2] = document.querySelector('#flex-basis-' + selector).value;
 
-        setProp(selector, 'flex', flexvalue.join(' '));
+        setProp('.'+selector, 'flex', flexvalue.join(' '));
 
 
         shorthand[1].innerHTML = flexvalue[0];
@@ -163,9 +173,9 @@ var init = function () {
 
     [].map.call(document.querySelectorAll('.demo li'), function (fxb, ind) {
         var dp = document.querySelectorAll('[data-prop=flex-basis]');
-        setProp(fxb.classList.item(0), 'flex-basis', dp[ind].value);
+        setProp('.'+fxb.classList.item(0), 'flex-basis', dp[ind].value);
     });
-    
+
     [].map.call(document.querySelectorAll('[id|=flex-basis-auto]'), function (cb) {
         checkboxes(cb);
     });

@@ -9,26 +9,25 @@
         <script src="../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/chapter6/rotate.css">
-        <style>
-        #rotate{}
-        </style>
+        <!-- deliberately empty-->
+        <style></style>
    </head>
-        
+
     <body>
         <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 6</h1>
-            <a href="./">Back to listing</a>
+            <a href="./index.html">Back to listing</a>
         </header>
 
-        <main class="content">  
+        <main class="content">
             <h2><code id="output">transform: rotate3d(<span>0</span>, <span>0</span>, <span>0</span>, <span>0</span>deg)</code></h2>
-            
+
             <form>
-                <p>Adjust the slider to rotate the object below. (
+                <p>Adjust the values below rotate the object. (
                     <input type="checkbox" id="addpersp" name="addpersp">
                     <label for="addpersp">Add <code>perspective: 200px</code> to container</label>)
-                </p> 
-            
+                </p>
+
                 <div class="flex">
                     <div>
                         <label for="xvector">X-vector</label>
@@ -49,10 +48,10 @@
                         <label for="degree">degree</label>
                         <input id="degree" name="degree" type="number" value="0">
                     </div>
-                </div> 
+                </div>
                 <p><button type="reset">Reset</button></p>
             </form>
-           
+
             <object id="rotate" data="../images/csscircle.svg" type="image/svg+xml"></object>
         </main>
 
@@ -64,8 +63,8 @@
         </footer>
 
 
-        <script type="text/javascript">    
-            var rulestr = '#rotate{transform: rotate3d(%s)';         
+        <script type="text/javascript">
+            var rulestr = '#rotate{transform: rotate3d(%s)';
         </script>
 		<script type="text/javascript" src="../js/convertangles.min.js"></script>
 		<script type="text/javascript" src="../js/escapereset.js"></script>

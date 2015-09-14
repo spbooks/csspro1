@@ -10,16 +10,19 @@
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/chapter7/mq.css">
     </head>
-        
+
     <body>
         <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 7</h1>
-            <a href="./">Back to listing</a>
+            <a href="./index.html">Back to listing</a>
         </header>
 
-        <main class="content">  
+        <main class="content">
             <h2>Media query events</h2>
-            <p><b>Resize</b> the browser window or <b>change its orientation</b>. This will toggle a class name for the <code>body</code> element, and cause the background color to change.</p>
+            <p>Change the <b>browser window's orientation</b> <em>OR</em> <b>resize the browser window</b> so that its aspect ratio (<em>width</em> &div; <em>height</em>) is at least 1.</p>
+
+            <p>This will trigger a media query event. That event will, in turn, toggle a class name for the <code>body</code> element, and cause the background color to change.</p>
+            <p>View source to learn how it works.</p>
         </main>
 
 
@@ -29,23 +32,26 @@
             </p>
         </footer>
 
-   
+
 
         <script type="text/javascript">
-            var mq25em = matchMedia('(orientation: landscape)');
-
+            var mq25em = matchMedia('(min-aspect-ratio: 1/1)');
             mq25em.addListener(function(mq){
+                /*
+                If the browser condition changes, and the media
+                query matches, mq.matches return true
+                */
                 if (mq.matches) {
                     document.body.classList.add('mqmatches');
                 } else {
                     document.body.classList.remove('mqmatches');
                 }
 
-                if (console) {
+                if (console && mq.media) {
                     console.log(mq.media + ': '+mq.matches);
                 }
             });
         </script>
-        
+
     </body>
 </html>

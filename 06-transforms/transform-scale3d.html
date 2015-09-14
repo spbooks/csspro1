@@ -9,20 +9,21 @@
         <script src="../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/chapter6/scale.css">
+        <!-- deliberately empty -->
         <style></style>
    </head>
-        
+
     <body>
         <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 6</h1>
-            <a href="./">Back to listing</a>
+            <a href="./index.html">Back to listing</a>
         </header>
 
-        <main class="content dimen">  
+        <main class="content dimen">
             <h2>
                 <code id="output">transform: scale3d(<span>1, 1, 1</span>)</code>
             </h2>
-            
+
             <form id="scale3d">
             <div class="flex">
                 <label for="xdim">X direction</label>
@@ -31,19 +32,19 @@
                 <b>2</b>
             </div>
 
-            <div class="flex">   
+            <div class="flex">
                 <label for="ydim">Y direction</label>
                 <b>-2</b>
                 <input type="range" id="ydim" name="y" min="-2" max="2" value="1" step=".1">
                 <b>2</b>
             </div>
-            <div class="flex">   
+            <div class="flex">
                 <label for="zdim">Z direction</label>
                 <b>-2</b>
                 <input type="range" id="zdim" name="z" min="-2" max="2" value="1" step=".1">
                 <b>2</b>
             </div>
-            <p> <button type="reset">Reset</button></p>   
+            <p> <button type="reset">Reset</button></p>
             </form>
 
             <div id="scale">
@@ -53,7 +54,7 @@
  viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
                         <circle cx="100" cy="100" r="25"/>
                         </svg>
-                     </div> 
+                     </div>
 
                      <div class="d2">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -61,7 +62,7 @@
                         <circle cx="50" cy="50" r="25"/>
                         <circle cx="149.9" cy="149.9" r="25"/>
                         </svg>
-                     </div>  
+                     </div>
 
 
                      <div class="d3">
@@ -71,7 +72,7 @@
                         <circle cx="149.9" cy="149.9" r="25"/>
                         <circle cx="100" cy="100" r="25"/>
                         </svg>
-                     </div>  
+                     </div>
 
                      <div class="d4">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -80,7 +81,7 @@
                         <circle cx="149.9" cy="149.9" r="25"/>
                         <circle cx="149.9" cy="50" r="25"/>
                         <circle cx="50" cy="149.9" r="25"/>
-                        </svg>  
+                        </svg>
                     </div>
 
 
@@ -92,7 +93,7 @@
                         <circle cx="149.9" cy="50" r="25"/>
                         <circle cx="50" cy="149.9" r="25"/>
                         <circle cx="100" cy="100" r="25"/>
-                        </svg> 
+                        </svg>
                     </div>
 
                     <div class="d6">
@@ -105,7 +106,7 @@
                             <circle cx="149.9" cy="100" r="25"/>
                             <circle cx="50" cy="100" r="25"/>
                         </svg>
-                    </div>  
+                    </div>
                 </div>
             </div>
         </main>
@@ -118,7 +119,7 @@
         </footer>
 
 
-        <script type="text/javascript">    
+        <script type="text/javascript">
             var rulestr = '#scale{-webkit-transform: scale3d(%x, %y, %z); transform: scale3d(%x, %y, %z); }';
         </script>
 		<script type="text/javascript" src="../js/escapereset.js"></script>

@@ -60,11 +60,17 @@ td:last-child {
     margin: 0 1em 1em 0;
     padding: 5px;
     text-align: center;
-    width: 10vw; 
+    width: 10vw;
 }
 
 p.nth-item {
     border-radius: 1000px;
+}
+
+.first-last {
+    :first-of-type, :last-of-type {
+        @extend .matched;
+    }
 }
 
 .matched {
@@ -105,4 +111,3 @@ li:only-child, .only-child {
     list-style-type: circle;
     list-style-type: "\00A0\2660\00A0";
 }
- 

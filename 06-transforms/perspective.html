@@ -9,29 +9,31 @@
         <script src="../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/chapter6/carousel.css">
+        <!-- deliberately empty-->
+        <style></style>
    </head>
-        
+
     <body>
         <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 6</h1>
-            <a href="./">Back to listing</a>
+            <a href="./index.html">Back to listing</a>
         </header>
 
-        <main class="content">  
+        <main class="content">
             <h2>
                 <code id="output">perspective: <span>none</span></code>
             </h2>
-        
-            <p>Adjust the slider to adjust the perspective of the stage.</p> 
-            
+
+            <p>Adjust the slider to adjust the perspective of the stage.</p>
+
             <form>
             <div class="flex">
                 <b>0</b>
                 <input type="range" id="psp" name="psp" min="0" max="2000" value="0">
-                <b>2000px</b> 
+                <b>2000px</b>
                 <button type="reset">Reset</button>
             </div>
-            
+
             </form>
             <div id="perspective" class="carousel">
                 <div class="wrapper p3d">
@@ -51,8 +53,8 @@
             </p>
         </footer>
 
-        <script type="text/javascript">    
-            var rulestr = '#perspective{-webkit-perspective: %s; perspective: %s}';         
+        <script type="text/javascript">
+            var rulestr = '#perspective{-webkit-perspective: %s; perspective: %s}';
         </script>
 		<script type="text/javascript" src="../js/escapereset.js"></script>
         <script type="text/javascript" src="../js/chapter6/perspective.js"></script>
